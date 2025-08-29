@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ title }}</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/multilevel-nav.css" />
+</head>
+<body {{ body_attributes }}>
+{% block content %}{% endblock content %}
+    
+    <script id="view-markup-js" src="https://cdn.jsdelivr.net/gh/marshallcrosby/view-markup/dist/js/view-markup.min.js?modal-nav"></script>
+    <script src="assets/js/multilevel-nav-slide-over.js"></script>
+    <script src="assets/js/multilevel-nav.js"></script>
+
+{% block page_scripts %}{% endblock page_scripts %}
+</body>
+</html>

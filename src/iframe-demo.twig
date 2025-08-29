@@ -1,0 +1,158 @@
+{% set title = 'Iframe demo | Multilevel Nav' %}
+
+{% extends 'partials/layout/_base.twig' %}
+
+	{% block content %}
+	<header>
+		
+		<!-- Primary navbar -->
+		{% include 'partials/layout/_navbar-primary.twig' with {
+			selector_class: 'example-navbar',
+			modifier_class: 'mln--navbar',
+			data_mln_breakpoint: '768px',
+		} %}
+		
+	</header>
+
+	<main>
+		<div class="page__content">
+			<div class="col-wrapper">
+				<div class="col col--8">
+					<div class="skeleton">
+						<div class="skeleton__box" aria-hidden="true"></div>
+					</div>
+				</div>
+				<div class="col col--4">
+					<div class="skeleton" aria-hidden="true">
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-wrapper">
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton" aria-hidden="true">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col--4">
+					
+					<!-- Basic -->
+					{% include 'partials/layout/_nav-stacked.twig' with {
+						selector_class: 'example-stacked',
+						data_view_markup: 'data-view-markup="btn-y: -25px; associated-script: #scriptExample2"'
+					} %}
+				</div>
+				
+				<div class="col col--4">
+					
+					<!-- Basic -->
+					{% include 'partials/layout/_nav-stacked.twig' with {
+						selector_class: 'example-stacked',
+						data_view_markup: 'data-view-markup="btn-y: -25px; associated-script: #scriptExample2"'
+					} %}
+				</div>
+			</div>
+		</div>
+	</main>
+	
+{% endblock %}
+
+{% block page_scripts %}
+
+<script id="scriptExample">
+	
+
+	// Initialize on DOM content loaded - this replaces the jQuery document ready functions
+	document.addEventListener('DOMContentLoaded', () => {
+		
+		// Initialize navbar
+		multilevelNav('.example-navbar', {
+			'hoverIntent': true,
+			'hoverIntentTimeout': 300,
+			'navbarMenuBackdrop': true,
+			'navbarMegaMenuBackdrop': true,
+			'expanderBackdrop': true,
+		});
+		
+		// Initialize stacked nav
+		multilevelNav('.example-stacked', {
+			'expandActiveItem': true
+		});
+	});
+</script>
+
+{% endblock %}

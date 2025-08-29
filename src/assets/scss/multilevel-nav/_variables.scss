@@ -1,0 +1,81 @@
+//
+// Variables
+//
+
+// Colors
+$color-menu-primary: #2C3230 !default;
+$color-menu-link: white !default;
+$color-burger-bar: $color-menu-link !default;
+$color-mega-menu-bg: $color-menu-primary !default;
+$color-toggle: white !default;
+$color-backdrop: #000 !default;
+$color-slide-over-slide-title: white;
+
+// Opacity
+$opacity-backdrop: .5 !default;
+
+// Transition
+$transition-speed-child-menu: 450ms !default;
+$transition-speed-mega-menu: 450ms !default;
+$transition-speed-slide-over-height: 450ms !default;
+$transition-ease-child-menu: cubic-bezier(.19, 1, .22, 1) !default;
+$transition-ease-slide-over-height: $transition-ease-child-menu !default;
+$transition-ease-mega-menu: $transition-ease-child-menu !default;
+$transition-speed-expander: $transition-speed-child-menu !default;
+$transition-ease-expander: $transition-ease-child-menu !default;
+
+// Screen widths
+$mln-breakpoint: 768px !default;
+
+// Font/text related
+$font-family-sans-serif: 'Helvetica Neue', Arial, sans-serif !default;
+$font-size-slide-title: 1.5rem !default;
+
+// Sizes and spacing
+$padding-top-menu-item: .75rem !default;
+$padding-right-menu-item: 1rem !default;
+$padding-bottom-menu-item: .75rem !default;
+$padding-left-menu-item: 1rem !default;
+$padding-menu-item: $padding-top-menu-item $padding-right-menu-item $padding-bottom-menu-item $padding-left-menu-item !default;
+$padding-menu-item-inset: 1rem !default;
+$padding-mega-outer: 1rem !default;
+$margin-bottom-back-button: 1rem !default;
+$height-menu-item: 3rem !default;
+$height-expander: 3rem !default;
+$height-navbar: 3rem !default;
+$width-toggle-button: 2.813rem !default;
+$width-slide-over-width: 100vw !default;
+$height-toggle-button: 3rem !default;
+
+$space-between-anchor-and-toggler: $padding-right-menu-item * 0.5 !default; // Don't change this variable
+
+// Chevron toggle symbol specifics
+$width-toggle-symbol-chevron: .75rem !default;
+$height-toggle-symbol-chevron: .563rem !default;
+
+// Selectors
+$focusable-selectors: 'a[href], area[href], input, select, textarea, button, iframe, object, embed, [tabindex], [contenteditable]' !default;
+
+// Projected levels deep of child menus
+$levels-deep: 5 !default;
+
+
+
+//
+// Variables above breakpoint width
+//
+
+// Sizes and spacing
+$padding-menu-item-above-breakpoint: $padding-menu-item !default;
+$padding-menu-item-inset-above-breakpoint: $padding-menu-item-inset !default;
+$margin-right-navbar-list-item: .5rem !default;
+$height-menu-item-above-breakpoint: $height-menu-item !default;
+$height-navbar-above-breakpoint: $height-navbar !default;
+$width-child-menu-above-breakpoint: 12.5rem !default;
+$width-toggle-button-above-breakpoint: 2.188rem !default;
+
+
+//
+// Off canvas
+//
+$width-off-canvas: $width-slide-over-width !default;

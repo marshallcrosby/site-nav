@@ -1,0 +1,455 @@
+@use 'variables';
+@use 'mixins';
+
+//
+// Prevent spacing jitter before initialized
+//
+
+.mln__list {
+    visibility: hidden;
+}
+
+.mln--js-loaded .mln__list {
+    visibility: visible;
+}
+
+
+
+
+//
+// Menu expander related
+//
+
+.mln {
+    position: relative;
+    background-color: var(--mln-color-menu-primary);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    // Clearfix
+    &:before,
+    &:after {
+        display: table;
+        content: ' ';
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.mln__expander {
+    position: relative;
+    top: 100%;
+    top: calc(100% - 1px);
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+
+    // Clearfix
+    &:before,
+    &:after {
+        display: table;
+        content: ' ';
+    }
+    &:after {
+        clear: both;
+    }
+    
+    &[aria-hidden="true"] {
+        .mln__expander__helper > * {
+            transition: visibility var(--mln-transition-speed-expander) var(--mln-transition-ease-child-menu);
+            visibility: hidden;
+            user-select: none;
+        }
+    }
+}
+
+.mln--navbar {
+    .mln__expander {
+        position: absolute;
+    }
+}
+
+.mln__expander--showing {
+    max-height: none;
+    height: auto;
+}
+
+.mln__expander--transitioning {
+    transition: height var(--mln-transition-speed-expander) var(--mln-transition-ease-expander);
+
+    will-change: transform;
+}
+
+
+
+
+//
+// Navigation ul
+//
+
+.mln__list {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background-color: var(--mln-color-menu-primary);
+    list-style-type: none;
+}
+
+// Base styling before js adjusts DOM
+.mln__list > li > a,
+.mln__child-controls a,
+[class^="mln__level-"] > a,
+[class*=" mln__level-"] > a,
+.mln__toggle-link {
+    position: relative;
+    display: block;
+    padding-top: var(--mln-padding-top-menu-item);
+    padding-right: var(--mln-padding-right-menu-item);
+    padding-bottom: var(--mln-padding-bottom-menu-item);
+    // min-height: var(--mln-height-menu-item);
+    width: 100%;
+    border: 0;
+    color: var(--mln-color-menu-link);
+    text-align: left;
+    font-size: inherit;
+}
+
+.mln__list > li > ul,
+.mln__child__mega-menu {
+    display: none;
+}
+
+// Set list item padding left for each level
+@include mixins.level-padding-left-multiplier('.mln__level-', variables.$levels-deep, variables.$padding-menu-item-inset);
+
+// Nested element styling (after DOM is modified)
+.mln__child__collapse {
+    outline: 0 !important;
+    
+    .mln__child__list,
+    .mln__child__mega-menu {
+        display: block;
+    }
+
+    &[aria-hidden="true"] {
+        * {
+            transition: visibility var(--mln-transition-speed-child-menu) var(--mln-transition-ease-child-menu);
+            visibility: hidden;
+
+            user-select: none;
+        }
+    }
+}
+
+.mln__toggle-btn,
+.mln__toggle-indicator {
+    height: 100%;
+}
+
+
+
+
+//
+// Element styling (after DOM is modified)
+//
+
+.mln__child__collapse {
+    overflow: hidden;
+    height: 0;
+
+    will-change: transform;
+}
+
+.mln--height-auto {
+    height: auto;
+}
+
+.mln__child__list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.mln__child__mega-menu {
+    margin-right: auto;
+    margin-left: auto;
+    padding: var(--mln-padding-mega-outer);
+    background-color: var(--mln-color-mega-menu-bg);
+}
+
+.mln__child-controls {
+    position: relative;
+    padding-right: calc(var(--mln-width-toggle-button) + var(--mln-space-between-anchor-and-toggler));
+
+    // Hack to avoid double click on iOS Safari
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        display: block;
+        width: var(--mln-width-toggle-button);
+        height: 100%;
+        content: '';
+        cursor: pointer;
+    }
+
+    @media (min-width: #{variables.$mln-breakpoint}) {
+
+        // Hack to avoid double click on iOS Safari
+        &:before {
+            width: var(--mln-width-toggle-button);
+        }
+    }
+}
+
+.mln__has-child {
+    .mln__child__collapse {
+        z-index: 2;
+    }
+
+    &:hover {
+        .mln__child__collapse {
+            z-index: 3;
+        }
+    }
+}
+
+// Transitions
+.mln__child--transitioning {
+    transition: height var(--mln-transition-speed-child-menu) var(--mln-transition-ease-child-menu), z-index var(--mln-transition-speed-child-menu) var(--mln-transition-ease-child-menu);
+}
+
+.mln__has-child--mega-menu {
+    .mln__child--transitioning {
+        transition: height var(--mln-transition-speed-mega-menu) var(--mln-transition-ease-mega-menu), z-index var(--mln-transition-speed-mega-menu) var(--mln-transition-ease-mega-menu);
+    }
+}
+
+
+
+
+//
+// Whole link expand related
+//
+
+.mln--whole-link-expand {
+    .mln__toggle-btn {
+        visibility: hidden;
+    }
+
+    .mln__child-controls {
+        padding-right: 0;
+    }
+}
+
+.mln--top-level-whole-link-expand {
+    .mln__toggle-link + .mln__toggle-btn {
+        visibility: hidden;
+    }
+
+    .mln__level-1 {
+        .mln__child-controls {
+            padding-right: 0;
+        }
+    }
+}
+
+
+
+
+@media (min-width: #{variables.$mln-breakpoint}) {
+    .mln--expand {
+        .mln__expander {
+            height: auto;
+        }
+
+        &.mln--js-loaded {
+            .mln__expander:not(.mln__expander--showing) {
+                height: 0;
+            }
+        }
+    }
+
+
+
+
+    //
+    // Navbar styling (above breakpoint)
+    //
+
+    .mln--navbar {
+        position: relative;
+        z-index: 2;
+        height: var(--mln-height-navbar);
+        display: flex;
+
+        .mln__expander {
+            width: auto;
+
+            @media (min-width: #{variables.$mln-breakpoint}) {
+                position: static;
+                top: auto;
+                left: auto;
+                overflow: visible;
+                height: var(--mln-height-expander);
+
+                &[aria-hidden="true"] {
+                    * {
+                        visibility: visible;
+                        user-select: none;
+                    }
+                }
+            }
+        }
+
+        .mln__child-controls {
+            position: relative;
+            padding-right: inherit;
+
+            a {
+                padding-right: calc(var(--mln-width-toggle-button) + var(--mln-space-between-anchor-and-toggler));
+            }
+
+            .mln__toggle-btn, .mln__toggle-indicator {
+                padding: 0;
+                width: var(--mln-width-toggle-button);
+            }
+        }
+
+        .mln__child--overflow-visible {
+            overflow: visible;
+        }
+
+        [class*="mln__level-"] {
+            > a,
+            .mln__child-controls > a {
+                padding-left: var(--mln-padding-menu-item-inset);
+            }
+        }
+
+        .mln__list {
+            height: var(--mln-height-menu-item);
+            background-color: transparent;
+            display: flex;
+
+            // Styles before js adjusts DOM
+            > li {
+                margin-right: var(--mln-margin-right-navbar-list-item);
+                border: 0;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+
+                > div:not(.mln__child-controls):not(.mln__child__collapse):not(.mln__child__mega-menu) {
+                    display: none;
+                }
+            }
+
+            .mln__has-child {
+                position: relative;
+            }
+
+            .mln__child__collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 0;
+                min-width: var(--mln-width-child-menu);
+                width: 100%;
+                background-color: var(--mln-color-menu-primary);
+
+                .mln__child__collapse {
+                    top: 0;
+                    left: 100%;
+                }
+            }
+
+            .mln__has-child--mega-menu {
+                position: static;
+
+                > .mln__child__collapse {
+                    width: 100%;
+
+                     > .mln__child__collapse__helper > .mln__child__list {
+                        margin-top: var(--mln-padding-menu-item-inset);
+                        width: 33.33333%;
+
+                        .mln__child__collapse {
+                            max-width: 13.75rem;
+                        }
+                    }
+                }
+            }
+
+            > .mln__child--flow-right {
+                > .mln__child__collapse {
+                    right: 0;
+                    left: auto;
+                }
+
+                > .mln__child-controls .mln__toggle-btn,
+                > .mln__child-controls .mln__toggle-indicator {
+                    transform: rotate(0);
+                }
+            }
+
+            // Second+ level flow right styles
+            ul .mln__child--flow-right {
+                > .mln__child__collapse {
+                    right: 100%;
+                    left: auto;
+                }
+
+                > .mln__child-controls {
+                    .mln__toggle-btn,
+                    .mln__toggle-indicator {
+                        -ms-filter: "FlipH";
+                        filter: FlipH;
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+//
+// Menu backdrop
+//
+
+.mln-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mln-color-backdrop);
+    content: '';
+    opacity: 0;
+    transition: opacity calc(var(--mln-transition-speed-expander) - 200ms) linear;
+    pointer-events: none;
+
+    @media (min-width: #{variables.$mln-breakpoint}) {
+        display: block;
+    }
+}
+
+.js-mln-menu-showing,
+.js-mln-mega-menu-showing {
+    .mln-backdrop {
+        z-index: 1;
+        opacity: var(--mln-opacity-backdrop);
+        pointer-events: auto;
+    }
+}

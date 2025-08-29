@@ -1,0 +1,212 @@
+@use 'variables';
+
+//
+// Menu expander related
+//
+
+.mln__expand-btn {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: var(--mln-width-toggle-button);
+    height: var(--mln-height-toggle-button);
+    border: 0;
+    background-color: var(--mln-color-menu-primary);
+    color: white;
+    text-indent: -9999px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.mln__expand-btn__burger {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1.438rem;
+    height: .938rem;
+
+    &:after,
+    &:before {
+        position: absolute;
+        content: '';
+    }
+
+    &:before {
+        top: -.375rem;
+    }
+
+    &:after {
+        bottom: -.188rem;
+    }
+}
+
+.mln__expand-btn__burger,
+.mln__expand-btn__burger:before,
+.mln__expand-btn__burger:after {
+    position: relative;
+    display: block;
+    width: 1.2rem;
+    height: .188rem;
+    border-radius: 0;
+    background-color: var(--mln-color-burger-bar);
+}
+
+
+
+
+//
+// Child menu toggle button
+//
+
+.mln__toggle-btn,
+.mln__toggle-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    overflow: hidden;
+    width: var(--mln-width-toggle-button);
+    height: var(--mln-height-toggle-button);
+    border: 0;
+    border-radius: 0;
+    background-color: var(--mln-color-menu-primary-hover);
+    color: var(--mln-color-toggle);
+    text-align: center;
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    &:hover, &:focus {
+        background-color: var(--mln-color-menu-primary-focus);
+    }
+}
+
+.mln__toggle-indicator {
+    z-index: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+
+
+
+//
+// Button symbol related
+//
+
+.mln__toggle-btn__chevron {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    margin-top: -.156rem;
+    margin-left: -.344rem;
+    width: var(--mln-width-toggle-symbol-chevron);
+    height: var(--mln-height-toggle-symbol-chevron);
+    transition: transform 100ms ease-in-out;
+
+    &:before, &:after {
+        position: absolute;
+        top: .125rem;
+        display: block;
+        width: .5rem;
+        height: 0;
+        border-top: .188rem solid var(--mln-color-menu-link);
+        border-radius: 1px;
+        content: '';
+        transition: transform 150ms ease-in-out;
+        transform: translate3d(0, 0, 0);
+
+    }
+
+    &:before {
+        left: 0;
+        transform: rotate(45deg) translateZ(0);
+    }
+
+    &:after {
+        right: 0;
+        transform: rotate(-45deg) translateZ(0);
+    }
+}
+
+.mln__has-child--showing {
+    > .mln__child-controls {
+        .mln__toggle-btn__chevron {
+            &:before {
+                left: 0;
+                transform: rotate(-45deg) translateZ(0);
+            }
+
+            &:after {
+                right: 0;
+                transform: rotate(45deg) translateZ(0);
+            }
+        }
+
+        .mln__toggle-btn__symbol-custom {
+            display: inline-block;
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+
+
+
+//
+// Navbar styling (above breakpoint)
+//
+
+.mln--navbar {
+    display: flex;
+
+    @media (min-width: #{variables.$mln-breakpoint}) {
+        .mln__expand-btn {
+            display: none;
+        }
+
+        .mln__toggle-btn,
+        .mln__toggle-indicator {
+            background-color: transparent;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        .mln__toggle-btn__symbol-custom {
+            display: inline-block;
+            transform: rotate(0deg);
+        }
+
+        .mln__child__collapse {
+            .mln__toggle-btn__chevron {
+                transform: rotate(270deg);
+            }
+
+            .mln__toggle-btn__symbol-custom {
+                display: inline-block;
+                transform: rotate(-90deg);
+            }
+        }
+
+        .mln__level-1.mln__has-child--showing {
+            > .mln__child-controls {
+                .mln__toggle-btn__symbol-custom {
+                    transform: rotate(0deg);
+                }
+
+                .mln__toggle-btn__chevron {
+                    transform: translate3d(0, .188rem, 0);
+
+                    &:before {
+                        transform: rotate(45deg);
+                    }
+
+                    &:after {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,374 @@
+{% set title = 'Multilevel Nav' %}
+
+{% extends 'partials/layout/_base.twig' %}
+
+	{% block content %}
+
+	<header class="l-intro" style="margin-top: 60px;">
+		<h1>Multilevel Nav</h1>
+		<p>A multilevel navigation solution that's under 10Kb (gzipped).</p>
+	</header>
+
+	<main style="padding: 0 30px 60px 30px">
+		<div class="device device--md device--lg">
+			<div class="device__screen">
+				<div class="device__screen__inner">
+					<div class="status-bar">
+						<div class="symbol symbol--battery"></div>
+						<div class="symbol symbol--cell"></div>
+						<div class="symbol symbol--wifi"></div>
+					</div>
+					<div class="browser">
+						<div class="browser__tab">
+							<div class="browser__tab__border"></div>
+							<div class="browser__tab__content"></div>
+						</div>
+						<div class="browser__utility">
+							<div class="browser__address-bar"></div>
+						</div>
+						<div class="browser__circles"></div>
+					</div>
+					<div class="device__lcd aspect-ratio">
+						<iframe class="device__lcd__iframe content" src="iframe-demo.html" title="Simulated Responsive Screen"></iframe>
+					</div>
+					<div class="device__glare"></div>
+				</div>
+			</div>
+			<div class="device__body"></div>
+		</div>
+
+		<div class="devices-tablet-mobile">
+			<div class="devices-tablet-mobile__helper clearfix">
+				<div class="device device--md">
+					<div class="device__screen">
+						<div class="device__screen__inner">
+							<div class="status-bar">
+								<div class="symbol symbol--battery"></div>
+								<div class="symbol symbol--cell"></div>
+								<div class="symbol symbol--wifi"></div>
+							</div>
+							<div class="browser">
+								<div class="browser__tab">
+									<div class="browser__tab__border"></div>
+									<div class="browser__tab__content"></div>
+								</div>
+								<div class="browser__utility">
+									<div class="browser__address-bar"></div>
+								</div>
+								<div class="browser__circles"></div>
+							</div>
+							<div class="device__lcd aspect-ratio">
+								<iframe class="device__lcd__iframe content" src="iframe-demo.html" title="Simulated Tablet Screen"></iframe>
+							</div>
+							<div class="device__glare"></div>
+						</div>
+					</div>
+					<div class="device__body"></div>
+				</div>
+
+				<div class="device">
+					<div class="device__screen">
+						<div class="device__screen__inner">
+							<div class="status-bar">
+								<div class="symbol symbol--battery"></div>
+								<div class="symbol symbol--cell"></div>
+								<div class="symbol symbol--wifi"></div>
+							</div>
+							<div class="browser">
+								<div class="browser__tab">
+									<div class="browser__tab__border"></div>
+									<div class="browser__tab__content"></div>
+								</div>
+								<div class="browser__utility">
+									<div class="browser__address-bar"></div>
+								</div>
+								<div class="browser__circles"></div>
+							</div>
+							<div class="device__lcd aspect-ratio">
+								<iframe class="device__lcd__iframe content" src="navbar-with-slide-over.html" title="Simulated Mobile Screen"></iframe>
+							</div>
+							<div class="device__glare"></div>
+						</div>
+					</div>
+					<div class="device__body"></div>
+				</div>
+			</div>
+		</div>
+				
+		<div class="options">
+			<a href="demo.html">Demos</a>
+		</div>
+
+		<div class="options">
+			<h2 class="options__title">Dependencies</h2>
+			<div class="options__item">
+				<s><p>Minimum compatibile <a href="http://jquery.com/" target="_blank" rel="noopener">jQuery</a> version is 3.3.1.</p></s>
+				<s><p>If using for navbar, include <a href="http://cherne.net/brian/resources/jquery.hoverIntent.html" target="_blank" rel="noopener">jquery.hoverIntent</a> which fixes menu hover issues.</p></s>
+				<p><img src="assets/dance.gif" alt="Senior citizen cutting rug!" style="max-width: 100%; height: auto;">&nbsp;&nbsp;None!</p>
+			</div>
+		</div>
+
+		<div class="options">
+			<h2 class="options__title">Installation</h2>
+			<div class="options__item">
+				<h3>CSS Linkage</h3>
+				<p>Include in HTML head</p>
+				<pre><code>&lt;link rel="stylesheet" type="text/css" href="assets/css/multilevel-nav.css" /&gt;</code></pre>
+			</div>
+			<div class="options__item">
+				<h3>JS Linkage</h3>
+				<p>Add right before closing HTML body tag</p>
+				<pre><code>&lt;script src="assets/js/multilevel-nav.js"&gt;&lt;/script&gt;</code></pre>
+			</div>
+		</div>
+
+		<div class="options">
+			<h2 class="options__title">Call the plugin</h2>
+			<div class="options__item">
+				<pre><code>multilevelNav('.selector-name');</code></pre>
+			</div>
+		</div>
+
+		<div class="options">
+			<h2 class="options__title">JS Options</h2>
+
+			<div class="options__item">
+				<h3>hoverIntent</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+			</div>
+
+			<div class="options__item">
+				<h3>hoverIntentTimeout</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Number</code>
+					<br>
+					<strong>Default:</strong>
+					<code>250</code>
+					<br>
+				</p>
+				<p>Default jquery.hoverIntent timeout.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>toggleOnClickOnly</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>Access child menus only when user clicks menu item arrow. By default the menu opens on both hover and click on screen widths larger than the <strong>data-mln-breakpoint</strong> value.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>autoDirection</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>true</code>
+					<br>
+				</p>
+				<p>On larger screens, for menu items that are near the right edge of browser, the child menu will open to the right of the parent instead of the left.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>activeSelector</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>String</code>
+					<br>
+					<strong>Default:</strong>
+					<code>'.active'</code>
+					<br>
+				</p>
+				<p>Class used for active element.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>expandActiveItem</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>Items with class "active" will be expanded on page load. If the item is apart of a child menu, the parent menus will be expanded all the way down to the active item.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>wholeLinkToggler</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>Clicking the whole link will toggle the child menu. This removes the ability to use the top level as an href. Use in conjunction with <strong>"toggleOnClickOnly"</strong> for best results.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>topLevelWholeLinkToggler</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>Only the top level link will do what is described in the option <strong>wholeLinkToggler</strong>.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>childMenuTogglerSymbol</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>String</code>
+					<br>
+					<strong>Default:</strong>
+					<code>'&lt;span class="mln__toggle-btn__chevron"&gt;&lt;/span&gt;'</code>
+					<br>
+				</p>
+				<p>HTML that makes up the child menu toggle symbol</p>
+			</div>
+
+			<div class="options__item">
+				<h3>navbarMenuBackdrop</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>A backdrop (shaded overlay) appears over the site when a menu is showing (only on screen widths larger than the data-mln-breakpoint value).</p>
+			</div>
+
+			<div class="options__item">
+				<h3>navbarMegaMenuBackdrop</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>A backdrop (shaded overlay) appears over the site when a mega menu is showing (only on screen widths larger than the data-mln-breakpoint value).</p>
+			</div>
+
+			<div class="options__item">
+				<h3>expanderCloseOnInPageAnchorClick</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>When in page anchor link is activated inside an active expander, the expander closes automatically.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>menuCloseOnInPageAnchorClick</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>When in page anchor link is activated inside an active menu, the menu closes automatically (only on screen widths larger than the data-mln-breakpoint value).</p>
+			</div>
+			
+			
+			
+			
+			<div class="options__item">
+				<h3>offCanvasScrollToActiveItem</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>false</code>
+					<br>
+				</p>
+				<p>Use in conjunction with off canvas. On page load, the active menu item (in the off canvas), will be in view.</p>
+			</div>
+			
+			
+			<div class="options__item">
+				<h3>excludeLevel</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Number</code>
+					<br>
+					<strong>Default:</strong>
+					<code>-1</code>
+					<br>
+				</p>
+				<p>Exclude specified level of child menu items from being expandable.</p>
+			</div>
+			
+			
+			<div class="options__item">
+				<h3>autoCloseInactiveMenu</h3>
+				<p>
+					<strong>Type:</strong>
+					<code>Boolean</code>
+					<br>
+					<strong>Default:</strong>
+					<code>true</code>
+					<br>
+				</p>
+				<p>When tabbing out of active navbar menu, it automatically closes</p>
+			</div>
+		</div>
+
+		<div class="options">
+			<h2 class="options__title">CSS/Attribute Options</h2>
+
+			<div class="options__item">
+				<h3>data-mln-breakpoint</h3>
+				<p>Attribute used used for the navbar display as well as responsive expander display.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>.mln--navbar</h3>
+				<p>Class that adds responsive navgation.</p>
+			</div>
+
+			<div class="options__item">
+				<h3>.mln--expand-above-breakpoint</h3>
+				<p>Class that closes expander on screen widths smaller than the data-mln-breakpoint value and opens expander on screen widths larger than the data-mln-breakpoint value.</p>
+			</div>
+		</div>
+
+		<div class="options">
+			<h2 class="options__title">CSS built from pre-processed SASS</h2>
+			<div class="options__item">
+				<p>Check out the <strong>_variables.scss</strong> partial for quick customizations.</p>
+			</div>
+		</div>
+	</main>
+{% endblock %}

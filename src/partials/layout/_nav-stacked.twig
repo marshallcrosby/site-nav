@@ -1,0 +1,118 @@
+<nav class="{{ selector_class }} mln{% if modifier_class %}{{ ' ' ~ modifier_class }}{% endif %}" {% if data_mln_breakpoint %} data-mln-breakpoint="{{ data_mln_breakpoint }}"{% endif %} aria-label="secondary" {{ data_view_markup }}>
+    {% if in_expander %}
+    <strong class="heading-placeholder">{{ title }}</strong>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander">
+    {% endif %}
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            {% if mega_menu %}
+            <li><a href="http://google.com">Mega menu</a>
+
+                <!-- Mega menu div -->
+                <div class="mln__child__mega-menu">
+                    <div class="col-wrapper">
+                        <div class="col col--6">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 40%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col--6">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 80%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endif %}
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a class="active" href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Consectetur</a></li>
+            <li><a href="#">In luctus</a></li>
+            <li><a href="#">Vulputate</a></li>
+            <li><a href="#">Libero ornare</a></li>
+        </ul>
+    {% if in_expander %}    
+    </div>
+    {% endif %}
+</nav>

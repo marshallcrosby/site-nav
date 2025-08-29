@@ -1,0 +1,18 @@
+@use "sass:math";
+
+//
+// Multiply levels of an element
+//
+
+@mixin level-padding-left-multiplier($sel, $levels-deep, $inset) {
+	$selOrig: $sel;
+
+	@for $i from 1 to ($levels-deep + 1) {
+		#{$sel + $i} {
+			> a,
+			.mln__child-controls > a {
+				padding-left: $inset * $i;
+			}
+		}
+    }
+}

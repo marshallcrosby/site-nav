@@ -1,0 +1,143 @@
+{% set title = 'Navbar and basic inside expander | Multilevel Nav' %}
+
+{% extends 'partials/layout/_base.twig' %}
+
+	{% block content %}
+	<header>
+		
+		<!-- Primary navbar -->
+		{% include 'partials/layout/_navbar-primary.twig' with {
+			selector_class: 'example-navbar',
+			modifier_class: 'mln--navbar',
+			data_mln_breakpoint: '768'
+		} %}
+		
+	</header>
+
+	<main>
+		<div class="page__content">
+			<div class="col-wrapper">
+				<div class="col col--8">
+					<div class="skeleton">
+						<div class="skeleton__box" aria-hidden="true"></div>
+					</div>
+				</div>
+				<div class="col col--4">
+					<div class="skeleton" aria-hidden="true">
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-wrapper">
+				<div class="col col--4">
+					
+					<!-- Basic -->
+					{% include 'partials/layout/_nav-stacked.twig' with {
+						selector_class: 'example-stacked',
+						modifier_class: 'mln--expand-above-breakpoint',
+						data_mln_breakpoint: '768',
+						in_expander: true,
+						title: 'SECTION TITLE'
+					} %}
+				
+				</div>
+
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton" aria-hidden="true">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}
+
+{% block page_scripts %}
+
+<script>
+	multilevelNav('.example-navbar', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300
+	});
+
+	multilevelNav('.example-stacked', {
+		'expandActiveItem': true,
+		'topLevelWholeLinkToggler': true,
+		'childMenuTogglerSymbol': '<span class="mln__toggle-btn__symbol-custom" aria-hidden="true">&#9660;</span>'
+	});
+</script>
+
+{% endblock %}

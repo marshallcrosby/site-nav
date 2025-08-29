@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Nav</title>
+	<link rel="stylesheet" type="text/css" href="/assets/css/multilevel-nav/multilevel-nav.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/off-canvas/off-canvas.css" />
+	<style>
+		.hamburger {
+			display: flex;
+			flex-direction: column;
+			width: 20px;
+			height: 15px;
+			justify-content: space-between;
+		}
+
+		.hamburger span {
+			display: block;
+			height: 2px;
+			background-color: white;
+			transition: all 0.3s ease;
+		}
+	</style>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<body data-off-canvas-breakpoint="768">
+	
+	<!-- Off canvas nav starts here -->
+	<div class="oc-nav">
+		<div class="oc-nav__container">
+			
+			<!-- Brand -->
+			<a href="#" class="oc-nav__brand">Logo</a>
+			
+			<!-- Menu structure -->
+			<div class="oc-nav__menu oc-nav__menu--right" data-oc-menu id="offCanvas" aria-labelledby="offCanvasLabel">
+
+				<div class="oc-nav__title" id="offCanvasLabel">Navigation</div>
+				
+				<!-- Mobile close button -->
+				<button class="oc-nav__close" type="button" data-oc-close aria-controls="offCanvas" aria-expanded="false" aria-label="Toggle navigation">&times;</button>
+				
+				<!-- Navigation links -->
+				<nav class="example-navbar mln mln--navbar mln--navbar-slide-over" data-mln-breakpoint="768" aria-label="primary">
+
+					<!-- Navigation list -->
+					<ul class="mln__list">
+						<li>
+							<a href="#" data-mln-not-linkable="true">Demos</a>
+
+							<!-- Child list -->
+							<ul>
+								<li><a href="basic.html">Basic</a></li>
+								<li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+								<li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+								<li><a href="navbar.html">Navbar</a></li>
+								<li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+								<li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+							</ul>
+						</li>
+						<li><a href="http://google.com">Mega Menu</a>
+
+							<!-- Mega menu div -->
+							<div class="mln__child__mega-menu">
+								<div class="col-wrapper">
+									<div class="col col--4">
+										<div class="skeleton">
+											<div class="skeleton">
+												<img src="https://i.imgur.com/ar7M3.gif" alt="GIF of koala in business suit that zooms in on his smiling face" style="width: auto; max-width: 100%; margin-bottom: 1rem;">
+											</div>
+											<div class="skeleton__article">
+												<div class="skeleton__article">
+													<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+													<br>
+													<span class="skeleton__title" style="min-width: 40%;"></span>
+													<br>
+													<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+													<br>
+													<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+													<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+													<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col col--4">
+										<div class="skeleton">
+											<div class="skeleton">
+												<div class="skeleton__box"></div>
+											</div>
+											<div class="skeleton__article">
+												<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+												<br>
+												<span class="skeleton__title" style="min-width: 40%;"></span>
+												<br>
+												<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+												<br>
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="col col--4">
+										<div class="skeleton">
+											<div class="skeleton">
+												<div class="skeleton__box"></div>
+											</div>
+											<div class="skeleton__article">
+												<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+												<br>
+												<span class="skeleton__title" style="min-width: 80%;"></span>
+												<br>
+												<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+												<br>
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#">First level</a>
+
+							<!-- Child list -->
+							<ul>
+								<li><a href="#">Second level</a></li>
+								<li><a href="#">Sit amet</a></li>
+								<li><a href="#">Consectetur</a></li>
+								<li><a href="#">In luctus</a></li>
+								<li><a href="#">Vulputate</a></li>
+								<li><a href="#">Libero ornare</a>
+
+									<!-- Child list -->
+									<ul>
+										<li><a href="#">Third level</a></li>
+										<li><a href="#">Sit amet</a></li>
+										<li><a href="#">Consectetur</a></li>
+										<li><a href="#">In luctus</a></li>
+										<li><a href="#">Vulputate</a></li>
+										<li><a href="#">Fourth level</a></li>
+										<li><a href="#">Sit amet</a></li>
+										<li><a href="#">Consectetur</a></li>
+										<li><a href="#">In luctus</a></li>
+										<li><a href="#">Vulputate</a></li>
+										<li><a href="#">Last item</a></li>
+										<li><a href="#">Libero ornare</a>
+
+											<!-- Child list -->
+											<ul>
+												<li><a href="#">Fourth level</a></li>
+												<li><a href="#">Sit amet</a></li>
+												<li><a href="#">Consectetur</a></li>
+												<li><a href="#">In luctus</a></li>
+												<li><a href="#">Vulputate</a></li>
+												<li><a class="active" href="#">Last item</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<p class="d-inline-flex gap-1">
+					<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+						Link with href
+					</a>
+					<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+						Button with data-bs-target
+					</button>
+				</p>
+
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body">
+						Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+						<a href="#">Test</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Mobile toggle button -->
+			<button class="oc-nav__toggle" type="button" data-oc-toggle aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</button>
+		</div>
+	</div>
+
+	<!-- Offcanvas Overlay -->
+	<div class="oc-overlay" data-oc-overlay></div>
+
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<div class="hero-content">
+			<h1>Lorem ipsum</h1>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum doloribus eos corporis ea ullam aperiam autem animi asperiores quis aspernatur tenetur incidunt pariatur consectetur nemo, cupiditate eaque? Sed, earum porro!</p>
+			<div class="alert">
+				<strong>Desktop (≥992px):</strong> Horizontal oc-nav layout<br>
+				<strong>Mobile (<992px):</strong> Offcanvas sidebar layout<br>
+			</div>
+		</div>
+	</section>
+
+	<!-- Content Section -->
+	<section class="content-section">
+		<h2>Lorem ipsum dolor sit</h2>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+	</section>
+
+    <script src="/assets/js/multilevel-nav.js"></script>
+	<script src="/assets/js/multilevel-nav-slide-over.js"></script>
+    <script src="/assets/js/off-canvas.js"></script>
+
+
+	<script id="example1">
+
+		// Initialize when the DOM is loaded
+		document.addEventListener('DOMContentLoaded', () => {
+			
+			// Initialize navbar
+			multilevelNav('.example-navbar', {
+				hoverIntent: true,
+				hoverIntentTimeout: 300,
+				wholeLinkToggler: true,
+				toggleOnClickOnly: true,
+				excludeLevel: 2
+			});
+			
+			multilevelNavSlideOver('.example-navbar', {
+				slideTitleLink: true,
+				offCanvasCloseAllMenus: true
+			});
+		});
+	</script>
+</body>
+</html>

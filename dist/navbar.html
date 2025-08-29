@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Multilevel Nav</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/multilevel-nav.css" />
+</head>
+<body >
+	
+	<header>
+	
+		<!-- Primary navbar -->
+		<!-- Multilevel Nav parent -->
+<nav class="example-navbar mln mln--navbar" data-mln-breakpoint="768" aria-label="primary" >
+
+    <!-- Placeholder logo -->
+    <div class="logo-placeholder">
+        <div class="logo-placeholder__sun"></div>
+    </div>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander" style="margin-left: auto;">
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops.html">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            
+                        <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Libero ornare</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>		
+	</header>
+
+	<main class="l-demo-surround" id="mainContent">
+		<div class="l-intro" style="text-align: center;">
+			<h1>Navbar</h1>
+		</div>
+
+		<div class="page__content">
+			<div class="col-wrapper">
+				<div class="col col--8">
+					<div class="skeleton">
+						<div class="skeleton__box" aria-hidden="true"></div>
+					</div>
+				</div>
+				<div class="col col--4">
+					<div class="skeleton" aria-hidden="true">
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-wrapper">
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton" aria-hidden="true">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton" aria-hidden="true">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="options__item">
+			<h2>HTML</h2>
+			<pre>
+<code>&lt;nav class="selector-name mln <strong>mln--navbar</strong>" <strong>data-mln-breakpoint="768"</strong>&gt;
+  &lt;button class="mln__expand-btn" type="button" aria-label="Menu"&gt;
+    &lt;span class="mln__expand-btn__burger"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="<strong>mln__expander</strong>"&gt;
+    &lt;ul class="mln__list"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Sit amet&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Sit amet&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Consectetur&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Sit amet&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Consectetur&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Vulputate&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Libero ornare&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Sit amet&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Libero ornare&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+		</div>
+
+		<div class="options__item">
+			<h2>JS</h2>
+			<p><strong>Note: </strong>include <a href="https://github.com/briancherne/jquery-hoverIntent" target="_blank" rel="noopener">jquery.hoverIntent</a> <em>(recommended)</em>.</p>
+			<pre>
+<code>$('.selector-name').multilevelNav({
+  'hoverIntent': true,
+  'hoverIntentTimeout': 300
+});</code></pre>
+		</div>
+	</main>
+    
+    <script id="view-markup-js" src="https://cdn.jsdelivr.net/gh/marshallcrosby/view-markup/dist/js/view-markup.min.js?modal-nav"></script>
+    <script src="assets/js/multilevel-nav-slide-over.js"></script>
+    <script src="assets/js/multilevel-nav.js"></script>
+
+
+<script>
+	$(function() {
+		$('.example-navbar').multilevelNav({
+			'hoverIntent': true,
+			'hoverIntentTimeout': 300
+		});
+	});
+</script>
+
+</body>
+</html>

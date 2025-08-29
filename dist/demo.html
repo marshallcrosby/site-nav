@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Docs | Multilevel Nav</title>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/multilevel-nav.css" />
+</head>
+<body >
+
+	<main style="padding: 40px; max-width: 992px; margin: 0 auto;">
+		<h1 style="margin-bottom: 40px;">Multilevel Nav Demos</h1>
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Defaults</h2>
+			<h3 style="margin-bottom: 20px;">Menu</h3>
+
+			<!-- Menu -->
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				<nav class="example-selector-menu mln"  aria-label="secondary" data-view-markup="title: Menu; btn-x: calc(100% + 5px); associated-script: #scriptExample1; modal-nav: true;">
+    
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+                        <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a class="active" href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Consectetur</a></li>
+            <li><a href="#">In luctus</a></li>
+            <li><a href="#">Vulputate</a></li>
+            <li><a href="#">Libero ornare</a></li>
+        </ul>
+    </nav>			</div>
+
+		
+			<h3 style="margin-bottom: 20px;">Navbar</h3>
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar -->
+				<!-- Multilevel Nav parent -->
+<nav class="example-selector-navbar mln mln--navbar" data-mln-breakpoint="768" aria-label="primary" data-view-markup="title: Navbar; associated-script: #scriptExample2; btn-x: 10px; btn-y: calc(100% + 4px);">
+
+    <!-- Placeholder logo -->
+    <div class="logo-placeholder">
+        <div class="logo-placeholder__sun"></div>
+    </div>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander" style="margin-left: auto;">
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops.html">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            
+                        <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Libero ornare</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Expander</h2>
+			<h3 style="margin-bottom: 20px;">Menu inside expander</h3>
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				
+				<!-- Menu inside expander -->
+				<nav class="example-selector-menu-inside-expander mln"  aria-label="secondary" data-view-markup="title: Menu inside expander; btn-x: calc(100% + 5px); associated-script: #scriptExample3;">
+        <strong class="heading-placeholder">Navigation Title</strong>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander">
+    
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+                        <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a class="active" href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Consectetur</a></li>
+            <li><a href="#">In luctus</a></li>
+            <li><a href="#">Vulputate</a></li>
+            <li><a href="#">Libero ornare</a></li>
+        </ul>
+        
+    </div>
+    </nav>			</div>
+			
+			<h3 style="margin-bottom: 20px;">Menu inside responsive expander</h3>
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				
+				<!-- Menu inside responsive expander -->
+				<nav class="example-selector-menu-inside-responsive-expander mln mln--expand-above-breakpoint"  data-mln-breakpoint="768" aria-label="secondary" data-view-markup="title: Menu inside responsive expander; btn-x: calc(100% + 5px); associated-script: #scriptExample4;">
+        <strong class="heading-placeholder">Navigation Title</strong>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander">
+    
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+                        <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a class="active" href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Consectetur</a></li>
+            <li><a href="#">In luctus</a></li>
+            <li><a href="#">Vulputate</a></li>
+            <li><a href="#">Libero ornare</a></li>
+        </ul>
+        
+    </div>
+    </nav>			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Mega menu</h2>
+			<h3 style="margin-bottom: 20px;">Menu with mega menu</h3>
+			
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				
+				<!-- Menu with mega menu -->
+				<nav class="example-selector-menu-with-mega-menu mln"  aria-label="secondary" data-view-markup="title: Menu with mega menu; btn-x: calc(100% + 5px); associated-script: #scriptExample5;">
+    
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+                        <li><a href="http://google.com">Mega menu</a>
+
+                <!-- Mega menu div -->
+                <div class="mln__child__mega-menu">
+                    <div class="col-wrapper">
+                        <div class="col col--6">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 40%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col--6">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 80%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+                        <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a class="active" href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Consectetur</a></li>
+            <li><a href="#">In luctus</a></li>
+            <li><a href="#">Vulputate</a></li>
+            <li><a href="#">Libero ornare</a></li>
+        </ul>
+    </nav>			</div>
+			
+			<h3 style="margin-bottom: 20px;">Navbar with mega menu</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar -->
+				<!-- Multilevel Nav parent -->
+<nav class="example-selector-navbar-with-mega-menu mln mln--navbar" data-mln-breakpoint="768" aria-label="primary" data-view-markup="title: Navbar with mega menu; associated-script: #scriptExample6; btn-x: 10px; btn-y: calc(100% + 4px);">
+
+    <!-- Placeholder logo -->
+    <div class="logo-placeholder">
+        <div class="logo-placeholder__sun"></div>
+    </div>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander" style="margin-left: auto;">
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops.html">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            
+                        <li><a href="http://google.com">Mega menu</a>
+
+                <!-- Mega menu div -->
+                <div class="mln__child__mega-menu">
+                    <div class="col-wrapper">
+                        <div class="col col--4">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 40%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col--4">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 40%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col--4">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 80%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+                        <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Libero ornare</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Backdrop</h2>
+			<h3 style="margin-bottom: 20px;">Navbar with backdrop</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar with backdrop -->
+				<!-- Multilevel Nav parent -->
+<nav class="example-selector-navbar-with-backdrop mln mln--navbar" data-mln-breakpoint="768" aria-label="primary" data-view-markup="title: Navbar with backdrop; associated-script: #scriptExample7; btn-x: 10px; btn-y: calc(100% + 4px);">
+
+    <!-- Placeholder logo -->
+    <div class="logo-placeholder">
+        <div class="logo-placeholder__sun"></div>
+    </div>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander" style="margin-left: auto;">
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops.html">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            
+                        <li><a href="http://google.com">Mega menu</a>
+
+                <!-- Mega menu div -->
+                <div class="mln__child__mega-menu">
+                    <div class="col-wrapper">
+                        <div class="col col--4">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 40%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col--4">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 40%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col--4">
+                            <div class="skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__box"></div>
+                                </div>
+                                <div class="skeleton__article">
+                                    <span class="skeleton__paragraph" style="min-width: 60%;"></span>
+                                    <br>
+                                    <span class="skeleton__title" style="min-width: 80%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 70%;"></span>
+                                    <br>
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+                                    <span class="skeleton__paragraph" style="min-width: 20%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+                        <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Libero ornare</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Expand to active child menu</h2>
+			
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				<!-- Expand to active menu item -->
+				<nav class="example-selector-menu-expand-to-active mln"  aria-label="secondary" data-view-markup="title: Expand to active child menu; btn-x: calc(100% + 5px); associated-script: #scriptExample8;">
+    
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+                        <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a class="active" href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Consectetur</a></li>
+            <li><a href="#">In luctus</a></li>
+            <li><a href="#">Vulputate</a></li>
+            <li><a href="#">Libero ornare</a></li>
+        </ul>
+    </nav>			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Navbar menu toggling and toggle event (hover and click)</h2>
+			<h3 style="margin-bottom: 20px;">Navbar toggle on click only</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar toggle on click only -->
+				<!-- Multilevel Nav parent -->
+<nav class="example-selector-navbar-click-only mln mln--navbar" data-mln-breakpoint="768" aria-label="primary" data-view-markup="title: Navbar toggle on click only; associated-script: #scriptExample9; btn-x: 10px; btn-y: calc(100% + 4px);">
+
+    <!-- Placeholder logo -->
+    <div class="logo-placeholder">
+        <div class="logo-placeholder__sun"></div>
+    </div>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander" style="margin-left: auto;">
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops.html">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            
+                        <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Libero ornare</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>			</div>
+			
+			<h3 style="margin-bottom: 20px;">Navbar whole link toggle on click only</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar toggle on click only -->
+				<!-- Multilevel Nav parent -->
+<nav class="example-selector-navbar-whole-link-click-only mln mln--navbar" data-mln-breakpoint="768" aria-label="primary" data-view-markup="title: Navbar whole link toggle on click only; associated-script: #scriptExample10; btn-x: 10px; btn-y: calc(100% + 4px);">
+
+    <!-- Placeholder logo -->
+    <div class="logo-placeholder">
+        <div class="logo-placeholder__sun"></div>
+    </div>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander" style="margin-left: auto;">
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops.html">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            
+                        <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Libero ornare</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>			</div>
+			
+			<h3 style="margin-bottom: 20px;">Navbar top level whole link toggle on click only</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar toggle on click only -->
+				<!-- Multilevel Nav parent -->
+<nav class="example-selector-navbar-top-level-whole-link-click-only mln mln--navbar" data-mln-breakpoint="768" aria-label="primary" data-view-markup="title: Navbar top level whole link toggle on click only; associated-script: #scriptExample11; btn-x: 10px; btn-y: calc(100% + 4px);">
+
+    <!-- Placeholder logo -->
+    <div class="logo-placeholder">
+        <div class="logo-placeholder__sun"></div>
+    </div>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander" style="margin-left: auto;">
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops.html">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            
+                        <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Libero ornare</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Exclude level</h2>
+			
+			<h3 style="margin-bottom: 20px;">Menu with the level 2+ excluded</h3>
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				<!-- Exclude level -->
+				<nav class="example-selector-menu-exclude-level mln"  aria-label="secondary" data-view-markup="title: Menu with the level 2+ excluded; btn-x: calc(100% + 5px); associated-script: #scriptExample12;">
+    
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+                        <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a class="active" href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Consectetur</a></li>
+            <li><a href="#">In luctus</a></li>
+            <li><a href="#">Vulputate</a></li>
+            <li><a href="#">Libero ornare</a></li>
+        </ul>
+    </nav>			</div>
+			
+			<h3 style="margin-bottom: 20px;">Navbar with the level 2+ excluded</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Exclude level -->
+				<!-- Multilevel Nav parent -->
+<nav class="example-selector-navbar-exclude-level mln mln--navbar" data-mln-breakpoint="768" aria-label="primary" data-view-markup="title: Navbar with the level 2+ excluded; associated-script: #scriptExample11; btn-x: 10px; btn-y: calc(100% + 4px);">
+
+    <!-- Placeholder logo -->
+    <div class="logo-placeholder">
+        <div class="logo-placeholder__sun"></div>
+    </div>
+
+    <!-- Expander toggle button -->
+    <button class="mln__expand-btn" type="button" aria-label="Menu" style="margin-left: auto;">
+        <span class="mln__expand-btn__burger"></span>
+    </button>
+
+    <!-- Expander -->
+    <div class="mln__expander" style="margin-left: auto;">
+
+        <!-- Navigation list -->
+        <ul class="mln__list">
+            <li><a href="#">Demos</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="basic.html">Basic</a></li>
+                    <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+                    <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+                    <li><a href="navbar.html">Navbar</a></li>
+                    <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+                    <li><a href="navbar-with-backdrops.html">Navbar with backdrops</a></li>
+                </ul>
+            </li>
+            
+                        <li><a href="#">In luctus</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a></li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a>
+
+                                <!-- Child list -->
+                                <ul>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Sit amet</a></li>
+                                    <li><a href="#">Consectetur</a></li>
+                                    <li><a href="#">In luctus</a></li>
+                                    <li><a href="#">Vulputate</a></li>
+                                    <li><a href="#">Libero ornare</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Libero ornare</a>
+
+                <!-- Child list -->
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Sit amet</a></li>
+                    <li><a href="#">Consectetur</a></li>
+                    <li><a href="#">In luctus</a>
+
+                        <!-- Child list -->
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Sit amet</a></li>
+                            <li><a href="#">Consectetur</a></li>
+                            <li><a href="#">In luctus</a></li>
+                            <li><a href="#">Vulputate</a></li>
+                            <li><a href="#">Libero ornare</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Vulputate</a></li>
+                    <li><a href="#">Libero ornare</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>			</div>
+		</section>
+		
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Off canvas - with slide over menu on mobile</h2>
+			
+			<p><strong>Requires: </strong><a href="https://github.com/marshallcrosby/off-canvas" target="_blank" rel="noopener">off-canvas plugin</a>.</p>
+			
+			<iframe src="navbar-with-slide-over.html" width="100%" height="600" style="max-width: 480px; border: 0;"></iframe>
+			
+		</section>
+	</main>
+	
+    
+    <script id="view-markup-js" src="https://cdn.jsdelivr.net/gh/marshallcrosby/view-markup/dist/js/view-markup.min.js?modal-nav"></script>
+    <script src="assets/js/multilevel-nav-slide-over.js"></script>
+    <script src="assets/js/multilevel-nav.js"></script>
+
+
+<script id="scriptExample1">
+	multilevelNav('.example-selector-menu');
+</script>
+
+
+<script id="scriptExample2">
+	multilevelNav('.example-selector-navbar',{
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300
+	});
+</script>
+
+
+<script id="scriptExample3">
+	multilevelNav('.example-selector-menu-inside-expander');
+</script>
+
+
+<script id="scriptExample4">
+	multilevelNav('.example-selector-menu-inside-responsive-expander');
+</script>
+
+
+<script id="scriptExample5">
+	multilevelNav('.example-selector-menu-with-mega-menu');
+</script>
+
+
+<script id="scriptExample6">
+	multilevelNav('.example-selector-navbar-with-mega-menu', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300
+	});
+</script>
+
+
+<script id="scriptExample7">
+	multilevelNav('.example-selector-navbar-with-backdrop', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'navbarMenuBackdrop': true,
+		'navbarMegaMenuBackdrop': true
+	});
+</script>
+
+
+<script id="scriptExample8">
+	multilevelNav('.example-selector-menu-expand-to-active', {
+		'expandActiveItem': true
+	});
+</script>
+
+
+<script id="scriptExample9">
+	multilevelNav('.example-selector-navbar-click-only', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'toggleOnClickOnly': true
+	});
+</script>
+
+
+<script id="scriptExample10">
+	multilevelNav('.example-selector-navbar-whole-link-click-only', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'toggleOnClickOnly': true,
+		'wholeLinkToggler': true
+	});
+</script>
+
+
+<script id="scriptExample11">
+	multilevelNav('.example-selector-navbar-top-level-whole-link-click-only', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'toggleOnClickOnly': true,
+		'topLevelWholeLinkToggler': true
+	});
+</script>
+
+
+<script id="scriptExample12">
+	multilevelNav('.example-selector-menu-exclude-level', {
+		'excludeLevel': 2
+	});
+</script>
+
+
+<script id="scriptExample13">
+	multilevelNav('.example-selector-navbar-exclude-level', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'excludeLevel': 2
+	});
+</script>
+
+<script>
+	
+	//
+	// Dynamically adjust z-index of demo navs so they display correctly
+	//
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var allMln = document.querySelectorAll('.mln');
+		var allLength = allMln.length;
+
+		allMln.forEach(function(element) {
+			element.style.zIndex = allLength;
+			allLength--;
+		});
+	});
+</script>
+
+
+</body>
+</html>

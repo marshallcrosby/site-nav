@@ -1,0 +1,313 @@
+{% set title = 'Docs | Multilevel Nav' %}
+
+{% extends 'partials/layout/_base.twig' %}
+
+	{% block content %}
+
+	<main style="padding: 40px; max-width: 992px; margin: 0 auto;">
+		<h1 style="margin-bottom: 40px;">Multilevel Nav Demos</h1>
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Defaults</h2>
+			<h3 style="margin-bottom: 20px;">Menu</h3>
+
+			<!-- Menu -->
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				{% include 'partials/layout/_nav-stacked.twig' with {
+					selector_class: 'example-selector-menu',
+					data_view_markup: 'data-view-markup="title: Menu; btn-x: calc(100% + 5px); associated-script: #scriptExample1; modal-nav: true;"'
+				} %}
+			</div>
+
+		
+			<h3 style="margin-bottom: 20px;">Navbar</h3>
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar -->
+				{% include 'partials/layout/_navbar-primary.twig' with {
+					selector_class: 'example-selector-navbar',
+					data_mln_breakpoint: '768',
+					data_view_markup: 'data-view-markup="title: Navbar; associated-script: #scriptExample2; btn-x: 10px; btn-y: calc(100% + 4px);"'
+				} %}
+			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Expander</h2>
+			<h3 style="margin-bottom: 20px;">Menu inside expander</h3>
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				
+				<!-- Menu inside expander -->
+				{% include 'partials/layout/_nav-stacked.twig' with {
+					selector_class: 'example-selector-menu-inside-expander',
+					title: 'Navigation Title',
+					in_expander: true,
+					modifier_class: '',
+					data_view_markup: 'data-view-markup="title: Menu inside expander; btn-x: calc(100% + 5px); associated-script: #scriptExample3;"'
+				} %}
+			</div>
+			
+			<h3 style="margin-bottom: 20px;">Menu inside responsive expander</h3>
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				
+				<!-- Menu inside responsive expander -->
+				{% include 'partials/layout/_nav-stacked.twig' with {
+					selector_class: 'example-selector-menu-inside-responsive-expander',
+					in_expander: true,
+					modifier_class: 'mln--expand-above-breakpoint',
+					title: 'Navigation Title',
+					in_expander: true,
+					data_mln_breakpoint: '768',
+					data_view_markup: 'data-view-markup="title: Menu inside responsive expander; btn-x: calc(100% + 5px); associated-script: #scriptExample4;"'
+				} %}
+			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Mega menu</h2>
+			<h3 style="margin-bottom: 20px;">Menu with mega menu</h3>
+			
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				
+				<!-- Menu with mega menu -->
+				{% include 'partials/layout/_nav-stacked.twig' with {
+					selector_class: 'example-selector-menu-with-mega-menu',
+					mega_menu: true,
+					data_view_markup: 'data-view-markup="title: Menu with mega menu; btn-x: calc(100% + 5px); associated-script: #scriptExample5;"'
+				} %}
+			</div>
+			
+			<h3 style="margin-bottom: 20px;">Navbar with mega menu</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar -->
+				{% include 'partials/layout/_navbar-primary.twig' with {
+					selector_class: 'example-selector-navbar-with-mega-menu',
+					mega_menu: true,
+					data_mln_breakpoint: '768',
+					data_view_markup: 'data-view-markup="title: Navbar with mega menu; associated-script: #scriptExample6; btn-x: 10px; btn-y: calc(100% + 4px);"'
+				} %}
+			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Backdrop</h2>
+			<h3 style="margin-bottom: 20px;">Navbar with backdrop</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar with backdrop -->
+				{% include 'partials/layout/_navbar-primary.twig' with {
+					selector_class: 'example-selector-navbar-with-backdrop',
+					mega_menu: true,
+					data_mln_breakpoint: '768',
+					data_view_markup: 'data-view-markup="title: Navbar with backdrop; associated-script: #scriptExample7; btn-x: 10px; btn-y: calc(100% + 4px);"'
+				} %}
+			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Expand to active child menu</h2>
+			
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				<!-- Expand to active menu item -->
+				{% include 'partials/layout/_nav-stacked.twig' with {
+					selector_class: 'example-selector-menu-expand-to-active',
+					data_view_markup: 'data-view-markup="title: Expand to active child menu; btn-x: calc(100% + 5px); associated-script: #scriptExample8;"'
+				} %}
+			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Navbar menu toggling and toggle event (hover and click)</h2>
+			<h3 style="margin-bottom: 20px;">Navbar toggle on click only</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar toggle on click only -->
+				{% include 'partials/layout/_navbar-primary.twig' with {
+					selector_class: 'example-selector-navbar-click-only',
+					data_mln_breakpoint: '768',
+					data_view_markup: 'data-view-markup="title: Navbar toggle on click only; associated-script: #scriptExample9; btn-x: 10px; btn-y: calc(100% + 4px);"'
+				} %}
+			</div>
+			
+			<h3 style="margin-bottom: 20px;">Navbar whole link toggle on click only</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar toggle on click only -->
+				{% include 'partials/layout/_navbar-primary.twig' with {
+					selector_class: 'example-selector-navbar-whole-link-click-only',
+					data_mln_breakpoint: '768',
+					data_view_markup: 'data-view-markup="title: Navbar whole link toggle on click only; associated-script: #scriptExample10; btn-x: 10px; btn-y: calc(100% + 4px);"'
+				} %}
+			</div>
+			
+			<h3 style="margin-bottom: 20px;">Navbar top level whole link toggle on click only</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Primary navbar toggle on click only -->
+				{% include 'partials/layout/_navbar-primary.twig' with {
+					selector_class: 'example-selector-navbar-top-level-whole-link-click-only',
+					data_mln_breakpoint: '768',
+					data_view_markup: 'data-view-markup="title: Navbar top level whole link toggle on click only; associated-script: #scriptExample11; btn-x: 10px; btn-y: calc(100% + 4px);"'
+				} %}
+			</div>
+		</section>
+		
+				
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Exclude level</h2>
+			
+			<h3 style="margin-bottom: 20px;">Menu with the level 2+ excluded</h3>
+			<div style="max-width: 320px; margin: 0 0 40px 0;">
+				<!-- Exclude level -->
+				{% include 'partials/layout/_nav-stacked.twig' with {
+					selector_class: 'example-selector-menu-exclude-level',
+					data_view_markup: 'data-view-markup="title: Menu with the level 2+ excluded; btn-x: calc(100% + 5px); associated-script: #scriptExample12;"'
+				} %}
+			</div>
+			
+			<h3 style="margin-bottom: 20px;">Navbar with the level 2+ excluded</h3>
+			
+			<div style="max-width: 900px; margin: 0 0 80px 0;">
+				<!-- Exclude level -->
+				{% include 'partials/layout/_navbar-primary.twig' with {
+					selector_class: 'example-selector-navbar-exclude-level',
+					data_mln_breakpoint: '768',
+					data_view_markup: 'data-view-markup="title: Navbar with the level 2+ excluded; associated-script: #scriptExample11; btn-x: 10px; btn-y: calc(100% + 4px);"'
+				} %}
+			</div>
+		</section>
+		
+		<section style="margin-bottom: 100px; border-bottom: 1px solid #e3e3e3; padding-bottom: 60px;">
+			<h2 style="margin-bottom: 20px;">Off canvas - with slide over menu on mobile</h2>
+			
+			<p><strong>Requires: </strong><a href="https://github.com/marshallcrosby/off-canvas" target="_blank" rel="noopener">off-canvas plugin</a>.</p>
+			
+			<iframe src="navbar-with-slide-over.html" width="100%" height="600" style="max-width: 480px; border: 0;"></iframe>
+			
+		</section>
+	</main>
+	
+{% endblock %}
+
+{% block page_scripts %}
+
+<script id="scriptExample1">
+	multilevelNav('.example-selector-menu');
+</script>
+
+
+<script id="scriptExample2">
+	multilevelNav('.example-selector-navbar',{
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300
+	});
+</script>
+
+
+<script id="scriptExample3">
+	multilevelNav('.example-selector-menu-inside-expander');
+</script>
+
+
+<script id="scriptExample4">
+	multilevelNav('.example-selector-menu-inside-responsive-expander');
+</script>
+
+
+<script id="scriptExample5">
+	multilevelNav('.example-selector-menu-with-mega-menu');
+</script>
+
+
+<script id="scriptExample6">
+	multilevelNav('.example-selector-navbar-with-mega-menu', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300
+	});
+</script>
+
+
+<script id="scriptExample7">
+	multilevelNav('.example-selector-navbar-with-backdrop', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'navbarMenuBackdrop': true,
+		'navbarMegaMenuBackdrop': true
+	});
+</script>
+
+
+<script id="scriptExample8">
+	multilevelNav('.example-selector-menu-expand-to-active', {
+		'expandActiveItem': true
+	});
+</script>
+
+
+<script id="scriptExample9">
+	multilevelNav('.example-selector-navbar-click-only', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'toggleOnClickOnly': true
+	});
+</script>
+
+
+<script id="scriptExample10">
+	multilevelNav('.example-selector-navbar-whole-link-click-only', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'toggleOnClickOnly': true,
+		'wholeLinkToggler': true
+	});
+</script>
+
+
+<script id="scriptExample11">
+	multilevelNav('.example-selector-navbar-top-level-whole-link-click-only', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'toggleOnClickOnly': true,
+		'topLevelWholeLinkToggler': true
+	});
+</script>
+
+
+<script id="scriptExample12">
+	multilevelNav('.example-selector-menu-exclude-level', {
+		'excludeLevel': 2
+	});
+</script>
+
+
+<script id="scriptExample13">
+	multilevelNav('.example-selector-navbar-exclude-level', {
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'excludeLevel': 2
+	});
+</script>
+
+<script>
+	
+	//
+	// Dynamically adjust z-index of demo navs so they display correctly
+	//
+
+	document.addEventListener('DOMContentLoaded', function() {
+		var allMln = document.querySelectorAll('.mln');
+		var allLength = allMln.length;
+
+		allMln.forEach(function(element) {
+			element.style.zIndex = allLength;
+			allLength--;
+		});
+	});
+</script>
+
+
+{% endblock %}

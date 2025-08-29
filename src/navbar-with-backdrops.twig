@@ -1,0 +1,201 @@
+{% set title = 'Navbar with backdrops | Multilevel Nav' %}
+
+{% extends 'partials/layout/_base.twig' %}
+
+	{% block content %}
+	<header>
+		
+		<!-- Primary navbar -->
+		{% include 'partials/layout/_navbar-primary.twig' with {
+			selector_class: 'example-navbar',
+			modifier_class: 'mln--navbar',
+			data_mln_breakpoint: '768'
+		} %}
+		
+	</header>
+
+	<main class="l-demo-surround">
+		<div class="l-intro" style="text-align: center;">
+			<h1>Navbar</h1>
+			<p>On larger screens, when a child menu is active, an overlay backdrop appears over the page content.</p>
+		</div>
+
+		<div class="page__content">
+			<div class="col-wrapper">
+				<div class="col col--8">
+					<div class="skeleton">
+						<div class="skeleton__box" aria-hidden="true"></div>
+					</div>
+				</div>
+				<div class="col col--4">
+					<div class="skeleton" aria-hidden="true">
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-wrapper">
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton" aria-hidden="true">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton" aria-hidden="true">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col col--4">
+					<div class="skeleton">
+						<div class="skeleton">
+							<div class="skeleton__box"></div>
+						</div>
+						<div class="skeleton__article">
+							<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+							<br>
+							<span class="skeleton__title" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+							<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 98%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 92%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 90%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 93%;"></span>
+							<br>
+							<span class="skeleton__paragraph" style="min-width: 40%;"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="options__item">
+			<h2>HTML</h2>
+			<pre>
+<code>&lt;nav class="selector-name mln <strong>mln--navbar</strong>" data-mln-breakpoint="768"&gt;
+  &lt;button class="mln__expand-btn" type="button" aria-label="Menu"&gt;
+    &lt;span class="mln__expand-btn__burger"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="<strong>mln__expander</strong>"&gt;
+    &lt;ul class="mln__list"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Sit amet&lt;/a&gt;
+        &lt;<strong>div class="mln__child__mega-menu"</strong>&gt;
+          ...
+        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Vulputate&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Libero ornare&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Sit amet&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Libero ornare&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+		</div>
+
+		<div class="options__item">
+			<h2>JS</h2>
+			<p>See options added below.</p>
+			<p><strong>Note: </strong>include <a href="https://github.com/briancherne/jquery-hoverIntent" target="_blank" rel="noopener">jquery.hoverIntent</a> <em>(recommended)</em>.</p>
+			<pre>
+<code>$('.selector-name').multilevelNav({
+  'hoverIntent': true,
+  'hoverIntentTimeout': 300,
+  <strong>'navbarMenuBackdrop': true,</strong>
+  <strong>'navbarMegaMenuBackdrop': true</strong>
+});</code></pre>
+		</div>
+	</main>
+{% endblock %}
+
+{% block page_scripts %}
+
+<script>
+	$('.example-navbar').multilevelNav({
+		'hoverIntent': true,
+		'hoverIntentTimeout': 300,
+		'navbarMenuBackdrop': true,
+		'navbarMegaMenuBackdrop': true
+	});
+</script>
+
+{% endblock %}
