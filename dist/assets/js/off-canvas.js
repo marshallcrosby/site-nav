@@ -3,6 +3,7 @@ class OffCanvasNav {
         
         // Find the main navigation elements
         this.nav = navElement;
+        this.breakpoint = navElement.getAttribute('data-oc-breakpoint');
         this.menu = navElement.querySelector('[data-oc-menu]');
         this.overlay = navElement.querySelector('[data-oc-overlay]') || document.querySelector('[data-oc-overlay]');
         this.toggleButton = navElement.querySelector('[data-oc-toggle]');
@@ -11,7 +12,8 @@ class OffCanvasNav {
         // Track keyboard and focus state
         this.keyboardHandler = null;
         this.previouslyFocusedElement = null;
-        
+        this.swipeable = navElement.hasAttribute('data-oc-swipe');
+
         // Touch/swipe state
         this.touchStartX = 0;
         this.touchStartY = 0;
@@ -20,7 +22,7 @@ class OffCanvasNav {
         this.isDragging = false;
         this.swipeThreshold = 50;
         this.swipeVelocityThreshold = 0.3;
-        this.snapThreshold = 0.5; // 50% threshold to determine snap direction
+        this.snapThreshold = 0.5;
         
         // Gesture tracking
         this.isGestureInProgress = false;
@@ -64,14 +66,17 @@ class OffCanvasNav {
         });
         
         // Setup swipe functionality
-        this.setupSwipeListeners();
-        
+        if (this.swipeable) {
+            this.setupSwipeListeners();
+        }
+
         // Set initial accessibility state
         this.updateAccessibilityForCurrentState();
     }
     
     getMenuWidth() {
-        return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--oc-menu-width'), 10);
+        const menuWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--oc-menu-width'), 10);
+        return menuWidth;
     }
     
     isMenuOnRight() {
@@ -108,15 +113,11 @@ class OffCanvasNav {
     }
     
     setupSwipeListeners() {
+     
         // Touch events for swipe functionality
         document.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: true });
         document.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: false });
         document.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: true });
-        
-        // Mouse events for desktop swipe simulation (optional)
-        document.addEventListener('mousedown', (e) => this.handleMouseStart(e));
-        document.addEventListener('mousemove', (e) => this.handleMouseMove(e));
-        document.addEventListener('mouseup', (e) => this.handleMouseEnd(e));
     }
     
     handleTouchStart(e) {
@@ -402,11 +403,11 @@ class OffCanvasNav {
     }
     
     isDesktopView() {
-        return window.matchMedia('(min-width: 992px)').matches;
+        return window.matchMedia(`(min-width: ${parseInt(this.breakpoint)}px)`).matches;
     }
     
     isMobileView() {
-        return window.matchMedia('(max-width: 991px)').matches;
+        return window.matchMedia(`(max-width: ${parseInt(this.breakpoint) - 1}px)`).matches;
     }
     
     isElementVisible(element) {

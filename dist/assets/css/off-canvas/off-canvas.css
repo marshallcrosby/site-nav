@@ -1,4 +1,5 @@
 :root {
+  --oc-breakpoint: 768px;
   --oc-menu-width: 320px;
   --oc-container-width: 1200px;
   --oc-nav-z-index: 4;
