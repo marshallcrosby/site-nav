@@ -129,6 +129,7 @@ class OffCanvasNav {
         this.isDragging = false;
         this.isGestureInProgress = false;
         this.swipeStartTime = Date.now();
+        this.menu.removeAttribute('inert');
     }
     
     handleTouchMove(e) {
@@ -139,6 +140,7 @@ class OffCanvasNav {
         
         const deltaX = this.touchCurrentX - this.touchStartX;
         const deltaY = this.touchCurrentY - this.touchStartY;
+
         
         // Check if it's a horizontal swipe (more horizontal than vertical movement)
         if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
