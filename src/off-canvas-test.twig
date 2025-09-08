@@ -6,22 +6,6 @@
     <title>Site Nav</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/multilevel-nav/multilevel-nav.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/off-canvas/off-canvas.css" />
-	<style>
-		.hamburger {
-			display: flex;
-			flex-direction: column;
-			width: 20px;
-			height: 15px;
-			justify-content: space-between;
-		}
-
-		.hamburger span {
-			display: block;
-			height: 2px;
-			background-color: white;
-			transition: all 0.3s ease;
-		}
-	</style>
 </head>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -39,7 +23,7 @@
 			<!-- Menu structure -->
 			<div class="oc-nav__menu oc-nav__menu--right" data-oc-menu id="offCanvas" aria-labelledby="offCanvasLabel">
 
-				<div class="oc-nav__title" id="offCanvasLabel">Navigation</div>
+				<div class="oc-nav__title oc-nav__visually-hidden" id="offCanvasLabel">Navigation</div>
 				
 				<!-- Mobile close button -->
 				<button class="oc-nav__close" type="button" data-oc-close aria-controls="offCanvas" aria-expanded="false" aria-label="Toggle navigation">&times;</button>
@@ -190,7 +174,7 @@
 
 			<!-- Mobile toggle button -->
 			<button class="oc-nav__toggle" type="button" data-oc-toggle aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
+				<div class="oc-nav__toggle-hamburger">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -260,7 +244,8 @@
 				hoverIntentTimeout: 300,
 				wholeLinkToggler: true,
 				toggleOnClickOnly: true,
-				excludeLevel: 2
+				excludeLevel: 2,
+				expandActiveItem: true
 			});
 			
 			multilevelNavSlideOver('.example-navbar', {

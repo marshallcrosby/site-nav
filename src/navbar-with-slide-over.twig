@@ -1,603 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<title>Multilevel Nav | Navbar with Off Canvas</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Link to demo CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Nav</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/multilevel-nav/multilevel-nav.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
-    
-    <!-- Link to mln CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/multilevel-nav.css?v1" />
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/off-canvas/off-canvas.css" />
 </head>
 
-<body class="l-body has-header-fixed off-canvas-right" data-off-canvas-breakpoint="768">
-    <div class="l-surround">
+<body class="oc-demo">
 
-		<!-- Layout header -->
-		<header class="l-header slide-over-transition">
-			<div class="l-header__elements">
+	<!-- Off canvas nav starts here -->
+	<div class="oc-nav" data-oc-breakpoint="768" data-oc-swipe>
+		<div class="oc-tophat">
+			<div class="oc-nav__container">
+				<ul>
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="oc-nav__container">
+			
+			<!-- Brand -->
+			<div class="logo-placeholder">
+				<div class="logo-placeholder__sun"></div>
+				Logo<i>FPO</i>
+			</div>
+			
+			<!-- Menu structure -->
+			<div class="oc-nav__menu oc-nav__menu--right" data-oc-menu id="offCanvas" aria-labelledby="offCanvasLabel">
 
-				<!-- Branding placeholder -->
-				<div class="logo-placeholder">
-					<div class="logo-placeholder__sun"></div>
-				</div>
+				<div class="oc-nav__title oc-nav__visually-hidden" id="offCanvasLabel">Navigation</div>
+				
+				<!-- Mobile close button -->
+				<button class="oc-nav__close" type="button" data-oc-close aria-controls="offCanvas" aria-expanded="false" aria-label="Toggle navigation">&times;</button>
+				
+				<!-- Navigation links -->
+				<nav class="example-navbar mln mln--navbar mln--navbar-slide-over" data-mln-breakpoint="768" aria-label="primary">
 
-				<!-- Show/hide off-canvas button -->
-				<button class="toggle-off-canvas toggle-hamburger" type="button" aria-expanded="false" aria-controls="offCanvasArea" aria-label="Open Menu" style="margin-left: auto;">
-					<span class="toggle-hamburger__wrapper">
-						<span class="toggle-hamburger__bun"></span>
-						<span class="toggle-hamburger__bun"></span>
-						<span class="toggle-hamburger__bun"></span>
-					</span>
-				</button>
-                
-				<!-- Put elements in l-off-canvas container if you want them off canvas -->
-				<div class="l-off-canvas" id="offCanvasArea" tabindex="-1" aria-labelledby="offCanvasTitle">
-					<div class="l-off-canvas__helper">
-						<h4 id="offCanvasTitle" class="sr-only">Site navigation</h4>
+					<!-- Navigation list -->
+					<ul class="mln__list">
+						<li>
+							<a href="#" data-mln-not-linkable="true">Demos</a>
 
-						<!-- Show/hide off-canvas button -->
-						<button class="toggle-off-canvas toggle-hamburger toggle-hamburger--to-x" type="button" aria-expanded="false" aria-controls="offCanvasArea" aria-label="Close">
-							<span class="toggle-hamburger__wrapper">
-								<span class="toggle-hamburger__bun"></span>
-								<span class="toggle-hamburger__bun"></span>
-								<span class="toggle-hamburger__bun"></span>
-							</span>
-						</button>
-{# 
-						<button class="mln-back-button" type="button">
-							Back to Menu
-						</button>
+							<!-- Child list -->
+							<ul>
+								<li><a href="basic.html">Basic</a></li>
+								<li><a href="basic--inside-expander.html">Basic inside expander</a></li>
+								<li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
+								<li><a href="navbar.html">Navbar</a></li>
+								<li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
+								<li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
+							</ul>
+						</li>
+						<li><a href="http://google.com">Mega Menu</a>
 
-						<script>
-							window.addEventListener('DOMContentLoaded', function () {
-								$(function () {
-									let mlnBackButton = $('.mln-back-button');
-									let navBarEl = $('.example-navbar');
+							<!-- Mega menu div -->
+							<div class="mln__child__mega-menu">
+								<div class="col-wrapper">
+									<div class="col col--4">
+										<div class="skeleton">
+											<div class="skeleton">
+												<img src="https://i.imgur.com/ar7M3.gif" alt="GIF of koala in business suit that zooms in on his smiling face" style="width: auto; max-width: 100%; margin-bottom: 1rem;">
+											</div>
+											<div class="skeleton__article">
+												<div class="skeleton__article">
+													<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+													<br>
+													<span class="skeleton__title" style="min-width: 40%;"></span>
+													<br>
+													<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+													<br>
+													<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+													<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+													<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+												</div>
+											</div>
+										</div>
+									</div>
 
-									mlnBackButton.on('click', function () {
-										navBarEl.find('.mln__has-child--showing')
-											.last()
-											.find('.mln__back-btn')
-											.first()
-											.trigger('click');
-									});
+									<div class="col col--4">
+										<div class="skeleton">
+											<div class="skeleton">
+												<div class="skeleton__box"></div>
+											</div>
+											<div class="skeleton__article">
+												<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+												<br>
+												<span class="skeleton__title" style="min-width: 40%;"></span>
+												<br>
+												<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+												<br>
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+											</div>
+										</div>
+									</div>
 
-									navBarEl.find('.mln__has-child').on('show.mln.child', function () {
-										if (navBarEl.find('.mln__has-child--showing').length) {
-											mlnBackButton.addClass('mln-back-button--show');
-										}
-									});
+									<div class="col col--4">
+										<div class="skeleton">
+											<div class="skeleton">
+												<div class="skeleton__box"></div>
+											</div>
+											<div class="skeleton__article">
+												<span class="skeleton__paragraph" style="min-width: 60%;"></span>
+												<br>
+												<span class="skeleton__title" style="min-width: 80%;"></span>
+												<br>
+												<span class="skeleton__paragraph" style="min-width: 70%;"></span>
+												<br>
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
+												<span class="skeleton__paragraph" style="min-width: 20%;"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#">First level</a>
 
-									navBarEl.find('.mln__has-child').on('hide.mln.child', function () {
-										if (navBarEl.find('.mln__has-child--showing').length === 0) {
-											mlnBackButton.removeClass('mln-back-button--show');
-										}
-									});
-								});
-							});
-						</script>
-#}
+							<!-- Child list -->
+							<ul>
+								<li><a href="#">Second level</a></li>
+								<li><a href="#">Sit amet</a></li>
+								<li><a href="#">Consectetur</a></li>
+								<li><a href="#">In luctus</a></li>
+								<li><a href="#">Vulputate</a></li>
+								<li><a href="#">Libero ornare</a>
 
-						<!-- Navigation -->
-                        <nav class="example-navbar mln mln--navbar mln--navbar-slide-over" data-mln-breakpoint="768" aria-label="primary">
+									<!-- Child list -->
+									<ul>
+										<li><a href="#">Third level</a></li>
+										<li><a href="#">Sit amet</a></li>
+										<li><a href="#">Consectetur</a></li>
+										<li><a href="#">In luctus</a></li>
+										<li><a href="#">Vulputate</a></li>
+										<li><a href="#">Fourth level</a></li>
+										<li><a href="#">Sit amet</a></li>
+										<li><a href="#">Consectetur</a></li>
+										<li><a href="#">In luctus</a></li>
+										<li><a href="#">Vulputate</a></li>
+										<li><a href="#">Last item</a></li>
+										<li><a href="#">Libero ornare</a>
 
-                            <!-- Navigation list -->
-                            <ul class="mln__list">
-                                <li>
-									<a href="#" data-mln-not-linkable="true">Demos</a>
-
-                                    <!-- Child list -->
-                                    <ul>
-                                        <li><a href="basic.html">Basic</a></li>
-                                        <li><a href="basic--inside-expander.html">Basic inside expander</a></li>
-                                        <li><a href="basic--inside-responsive-expander.html">Basic inside responsive expander</a></li>
-                                        <li><a href="navbar.html">Navbar</a></li>
-                                        <li><a href="navbar-with-mega-menu.html">Navbar with mega menu</a></li>
-                                        <li><a href="navbar-with-backdrops">Navbar with backdrops</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="http://google.com">Mega Menu</a>
-
-                                    <!-- Mega menu div -->
-                                    <div class="mln__child__mega-menu">
-                                        <div class="col-wrapper">
-                                            <div class="col col--4">
-                                                <div class="skeleton">
-                                                    <div class="skeleton">
-                                                        <img src="https://i.imgur.com/ar7M3.gif" alt="GIF of koala in business suit that zooms in on his smiling face" style="width: auto; max-width: 100%; margin-bottom: 1rem;">
-                                                    </div>
-                                                    <div class="skeleton__article">
-                                                        <div class="skeleton__article">
-                                                            <span class="skeleton__paragraph" style="min-width: 60%;"></span>
-                                                            <br>
-                                                            <span class="skeleton__title" style="min-width: 40%;"></span>
-                                                            <br>
-                                                            <span class="skeleton__paragraph" style="min-width: 70%;"></span>
-                                                            <br>
-                                                            <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-                                                            <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-                                                            <span class="skeleton__paragraph" style="min-width: 20%;"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col col--4">
-                                                <div class="skeleton">
-                                                    <div class="skeleton">
-                                                        <div class="skeleton__box"></div>
-                                                    </div>
-                                                    <div class="skeleton__article">
-                                                        <span class="skeleton__paragraph" style="min-width: 60%;"></span>
-                                                        <br>
-                                                        <span class="skeleton__title" style="min-width: 40%;"></span>
-                                                        <br>
-                                                        <span class="skeleton__paragraph" style="min-width: 70%;"></span>
-                                                        <br>
-                                                        <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-                                                        <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-                                                        <span class="skeleton__paragraph" style="min-width: 20%;"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col col--4">
-                                                <div class="skeleton">
-                                                    <div class="skeleton">
-                                                        <div class="skeleton__box"></div>
-                                                    </div>
-                                                    <div class="skeleton__article">
-                                                        <span class="skeleton__paragraph" style="min-width: 60%;"></span>
-                                                        <br>
-                                                        <span class="skeleton__title" style="min-width: 80%;"></span>
-                                                        <br>
-                                                        <span class="skeleton__paragraph" style="min-width: 70%;"></span>
-                                                        <br>
-                                                        <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-                                                        <span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-                                                        <span class="skeleton__paragraph" style="min-width: 20%;"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-									<a href="#">First level</a>
-
-                                    <!-- Child list -->
-                                    <ul>
-                                        <li><a href="#">Second level</a></li>
-                                        <li><a href="#">Sit amet</a></li>
-                                        <li><a href="#">Consectetur</a></li>
-                                        <li><a href="#">In luctus</a></li>
-                                        <li><a href="#">Vulputate</a></li>
-                                        <li><a href="#">Libero ornare</a>
-
-                                            <!-- Child list -->
-                                            <ul>
-                                                <li><a href="#">Third level</a></li>
-                                                <li><a href="#">Sit amet</a></li>
-                                                <li><a href="#">Consectetur</a></li>
-                                                <li><a href="#">In luctus</a></li>
-                                                <li><a href="#">Vulputate</a></li>
+											<!-- Child list -->
+											<ul>
 												<li><a href="#">Fourth level</a></li>
 												<li><a href="#">Sit amet</a></li>
 												<li><a href="#">Consectetur</a></li>
 												<li><a href="#">In luctus</a></li>
 												<li><a href="#">Vulputate</a></li>
-												<li><a href="#">Last item</a></li>
-                                                <li><a href="#">Libero ornare</a>
-
-                                                    <!-- Child list -->
-                                                    <ul>
-                                                        <li><a href="#">Fourth level</a></li>
-                                                        <li><a href="#">Sit amet</a></li>
-                                                        <li><a href="#">Consectetur</a></li>
-                                                        <li><a href="#">In luctus</a></li>
-                                                        <li><a href="#">Vulputate</a></li>
-                                                        <li><a class="active" href="#">Last item</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                		</nav>
-						<p class="d-inline-flex gap-1">
-							<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-								Link with href
-							</a>
-							<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-								Button with data-bs-target
-							</button>
-						</p>
-
-						<div class="collapse" id="collapseExample">
-							<div class="card card-body">
-								Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-								<a href="#">Test</a>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Put more stuff here -->
-				</div>
+												<li><a class="active" href="#">Last item</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
 			</div>
-		</header>
 
-		<!-- Layout canvas with off canvas transition -->
-		<div class="l-canvas slide-over-transition">
-			<main class="l-demo-surround">
-				<div class="l-intro" style="text-align: center;">
-					<h1>Navbar</h1>
-					<p>
-						Example with slide over mobile menu <br>
-						<em><small>Requires off-canvas plugin (css/js)</small></em>
-					</p>
+			<!-- Mobile toggle button -->
+			<button class="oc-nav__toggle" type="button" data-oc-toggle aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="oc-nav__toggle-hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
-
-				<div class="page__content">
-					<div class="col-wrapper">
-						<div class="col col--8">
-							<div class="skeleton">
-								<div class="skeleton__box" aria-hidden="true"></div>
-							</div>
-						</div>
-						<div class="col col--4">
-							<div class="skeleton" aria-hidden="true">
-								<div class="skeleton__article">
-									<span class="skeleton__paragraph" style="min-width: 60%;"></span>
-									<br>
-									<span class="skeleton__title" style="min-width: 90%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 70%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 98%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 92%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 90%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 93%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 40%;"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-wrapper">
-						<div class="col col--4">
-							<nav class="example-stacked mln mln--slide-over" aria-label="secondary" data-view-markup="associated-script: #example2">
-								<ul class="mln__list">
-									<li><a href="#">Lorem ipsum</a></li>
-									<li><a href="#">Consectetur</a></li>
-									<li><a href="#">In luctus</a>
-										<ul>
-											<li><a href="#">Lorem ipsum</a></li>
-											<li><a href="#">Sit amet</a></li>
-											<li><a href="#">Consectetur</a></li>
-											<li><a href="#">In luctus</a></li>
-											<li><a href="#">Vulputate</a></li>
-											<li><a href="#">Libero ornare</a>
-												<ul>
-													<li><a href="#">Lorem ipsum</a></li>
-													<li><a href="#">Sit amet</a></li>
-													<li><a href="#">Consectetur</a></li>
-													<li><a href="#">In luctus</a></li>
-													<li><a href="#">Vulputate</a>
-														<ul>
-															<li><a href="#">Lorem ipsum</a></li>
-															<li><a href="#">Sit amet</a></li>
-															<li><a href="#">Consectetur</a></li>
-															<li><a href="#">In luctus</a></li>
-															<li><a href="#">Vulputate</a></li>
-															<li><a href="#">Libero ornare</a></li>
-														</ul>
-													</li>
-													<li><a href="#">Lorem ipsum</a></li>
-													<li><a href="#">Sit amet</a></li>
-													<li><a href="#">Consectetur</a></li>
-													<li><a href="#">In luctus</a></li>
-													<li><a href="#">Vulputate</a>
-													<li><a href="#">Libero ornare</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">Vulputate</a></li>
-									<li><a href="#">Libero ornare</a>
-										<ul>
-											<li><a href="#">Lorem ipsum</a></li>
-											<li><a href="#">Sit amet</a></li>
-											<li><a href="#">Consectetur</a></li>
-											<li><a href="#">Last Child Menu</a>
-												<ul>
-													<li><a href="#">Lorem ipsum</a></li>
-													<li><a href="#">Sit amet</a></li>
-													<li class="active"><a href="#">Consectetur</a></li>
-													<li><a href="#">In luctus</a></li>
-													<li><a href="#">Vulputate</a></li>
-													<li><a href="#">Libero ornare</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Vulputate</a></li>
-											<li><a href="#">Libero ornare</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-						</div>
-						
-						<div class="col col--4">
-							<nav class="example-stacked mln mln--slide-over" aria-label="secondary" data-view-markup="associated-script: #example2">
-								<ul class="mln__list">
-									<li><a href="#">Lorem ipsum</a></li>
-									<li><a href="#">Consectetur</a></li>
-									<li><a href="#">In luctus</a>
-										<ul>
-											<li><a href="#">Lorem ipsum</a></li>
-											<li><a href="#">Sit amet</a></li>
-											<li><a href="#">Consectetur</a></li>
-											<li><a href="#">In luctus</a></li>
-											<li><a href="#">Vulputate</a></li>
-											<li><a href="#">Libero ornare</a>
-												<ul>
-													<li><a href="#">Lorem ipsum</a></li>
-													<li><a href="#">Sit amet</a></li>
-													<li><a href="#">Consectetur</a></li>
-													<li><a href="#">In luctus</a></li>
-													<li><a href="#">Vulputate</a>
-														<ul>
-															<li><a href="#">Lorem ipsum</a></li>
-															<li><a href="#">Sit amet</a></li>
-															<li><a href="#">Consectetur</a></li>
-															<li><a href="#">In luctus</a></li>
-															<li><a href="#">Vulputate</a></li>
-															<li><a href="#">Libero ornare</a></li>
-														</ul>
-													</li>
-													<li><a href="#">Lorem ipsum</a></li>
-													<li><a href="#">Sit amet</a></li>
-													<li><a href="#">Consectetur</a></li>
-													<li><a href="#">In luctus</a></li>
-													<li><a href="#">Vulputate</a>
-													<li><a href="#">Libero ornare</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">Vulputate</a></li>
-									<li><a href="#">Libero ornare</a>
-										<ul>
-											<li><a href="#">Lorem ipsum</a></li>
-											<li><a href="#">Sit amet</a></li>
-											<li><a href="#">Consectetur</a></li>
-											<li><a href="#">Last Child Menu</a>
-												<ul>
-													<li><a href="#">Lorem ipsum</a></li>
-													<li><a href="#">Sit amet</a></li>
-													<li class="active"><a href="#">Consectetur</a></li>
-													<li><a href="#">In luctus</a></li>
-													<li><a href="#">Vulputate</a></li>
-													<li><a href="#">Libero ornare</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Vulputate</a></li>
-											<li><a href="#">Libero ornare</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-						</div>
-
-						<div class="col col--4">
-							<div class="skeleton">
-								<div class="skeleton" aria-hidden="true">
-									<div class="skeleton__box"></div>
-								</div>
-								<div class="skeleton__article">
-									<span class="skeleton__paragraph" style="min-width: 60%;"></span>
-									<br>
-									<span class="skeleton__title" style="min-width: 90%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 70%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 98%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 92%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 90%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 93%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 40%;"></span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col col--4">
-							<div class="skeleton">
-								<div class="skeleton">
-									<div class="skeleton__box"></div>
-								</div>
-								<div class="skeleton__article">
-									<span class="skeleton__paragraph" style="min-width: 60%;"></span>
-									<br>
-									<span class="skeleton__title" style="min-width: 90%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 70%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span> &nbsp;&nbsp;
-									<span class="skeleton__paragraph" style="min-width: 20%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 98%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 92%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 90%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 93%;"></span>
-									<br>
-									<span class="skeleton__paragraph" style="min-width: 40%;"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				{# <div class="options__item">
-					<h2>HTML</h2>
-					<p>Inside a top level list-item, add a div with the class <strong>mln__child__mega-menu</strong>. Fill that with whatever HTML you want. This can be used along side of child menus or on it's own.</p>
-			<pre>
-<code>
-&lt;body class="l-body has-header-fixed off-canvas-right" data-off-canvas-breakpoint="768"&gt;
-  &lt;div class="l-surround"&gt;
-    &lt;header class="l-header slide-over-transition"&gt;
-      &lt;div class="l-header__elements"&gt;
-        &lt;div class="logo-placeholder"&gt;
-          &lt;div class="logo-placeholder__sun"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;button aria-controls="offCanvasArea" aria-expanded="false" aria-label="Open Menu" class="toggle-off-canvas toggle-hamburger" type="button"&gt;
-          &lt;span class="toggle-hamburger__wrapper"&gt;
-            &lt;span class="toggle-hamburger__bun"&gt;&lt;/span&gt;
-            &lt;span class="toggle-hamburger__bun"&gt;&lt;/span&gt;
-            &lt;span class="toggle-hamburger__bun"&gt;&lt;/span&gt;
-          &lt;/span&gt;
-        &lt;/button&gt;
-        &lt;div aria-labelledby="offCanvasTitle" class="l-off-canvas" id="offCanvasArea" tabindex="-1"&gt;
-          &lt;div class="l-off-canvas__helper"&gt;
-            &lt;h4 class="sr-only" id="offCanvasTitle"&gt;Site navigation&lt;/h4&gt;
-            &lt;button aria-controls="offCanvasArea" aria-expanded="false" aria-label="Close" class="toggle-off-canvas toggle-hamburger toggle-hamburger--to-x" type="button"&gt;
-              &lt;span class="toggle-hamburger__wrapper"&gt;
-                &lt;span class="toggle-hamburger__bun"&gt;&lt;/span&gt;
-                &lt;span class="toggle-hamburger__bun"&gt;&lt;/span&gt;
-                &lt;span class="toggle-hamburger__bun"&gt;&lt;/span&gt;
-              &lt;/span&gt;
-            &lt;/button&gt;
-            &lt;nav aria-label="primary" class="example-navbar mln mln--navbar mln--slide-over" data-mln-breakpoint="768"&gt;
-              &lt;ul class="mln__list"&gt;
-                &lt;li&gt;
-                  &lt;a href="#"&gt;First level&lt;/a&gt;
-                  &lt;ul&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Second level&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Sit amet&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Consectetur&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;In luctus&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Vulputate&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Libero ornare&lt;/a&gt;
-                    &lt;/li&gt;
-                  &lt;/ul&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                  &lt;a href="#"&gt;Lorem Ipsum&lt;/a&gt;
-                  &lt;ul&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Lorem Ipsum Second level&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Sit amet&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Consectetur&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;In luctus&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Vulputate&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
-                      &lt;a href="#"&gt;Libero ornare&lt;/a&gt;
-                      &lt;ul&gt;
-                        &lt;li&gt;
-                          &lt;a href="#"&gt;Third level&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="#"&gt;Sit amet&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="#"&gt;Consectetur&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="#"&gt;In luctus&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="#"&gt;Vulputate&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="#"&gt;Libero ornare&lt;/a&gt;
-                        &lt;/li&gt;
-                      &lt;/ul&gt;
-                    &lt;/li&gt;
-                  &lt;/ul&gt;
-                &lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/nav&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/header&gt;
-    &lt;div class="l-canvas slide-over-transition"&gt;
-      ...
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-</code></pre>
-		</div> #}
-
-		{# <div class="options__item">
-			<h2>JS</h2>
-			<p><strong>Requires: </strong><a href="https://off-canvas.msc.blendinteractive.com" target="_blank" rel="noopener">off-canvas plugin</a>.</p>
-			<p><strong>Note: </strong>include <a href="https://github.com/briancherne/jquery-hoverIntent" target="_blank" rel="noopener">jquery.hoverIntent</a> <em>(recommended)</em>.</p>
-			<pre>
-<code>// Initialize mln
-$('.selector-name').multilevelNav({
-  'hoverIntent': true,
-  'hoverIntentTimeout': 300
-});</code></pre>
-
-<code>// Initialize mln slide over plugin <br>
-$('.selector-name').multilevelSlideOver();</code></pre>
-				</div> #}
-			</main>
+			</button>
 		</div>
 	</div>
-    <script src="https://cdn.jsdelivr.net/gh/marshallcrosby/view-markup/dist/js/view-markup.min.js"></script>
-	{# <script src="https://code.jquery.com/jquery-3.3.1.min.js?v1"></script> #}
-    <script src="assets/js/off-canvas-temp.js?v1"></script>
-	<script src="assets/js/multilevel-nav.js?v1"></script>
-	<script src="assets/js/multilevel-nav-slide-over.js?v1"></script>
+
+	<!-- Offcanvas Overlay -->
+	<div class="oc-overlay" data-oc-overlay></div>
+
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<div class="hero-content">
+			<h1>Lorem ipsum</h1>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum doloribus eos corporis ea ullam aperiam autem animi asperiores quis aspernatur tenetur incidunt pariatur consectetur nemo, cupiditate eaque? Sed, earum porro!</p>
+			<div class="alert">
+				<strong>Desktop (≥992px):</strong> Horizontal oc-nav layout<br>
+				<strong>Mobile (<992px):</strong> Offcanvas sidebar layout<br>
+			</div>
+		</div>
+	</section>
+
+	<!-- Content Section -->
+	<section class="content-section">
+		<h2>Lorem ipsum dolor sit</h2>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda aliquid ipsam est minima aut alias officiis provident atque dolorem. Ea, facilis id voluptates cum voluptatum asperiores possimus minus dolores.</p>
+	</section>
+
+    <script src="assets/js/multilevel-nav.js"></script>
+	<script src="assets/js/multilevel-nav-slide-over.js"></script>
+    <script src="assets/js/off-canvas.js"></script>
+
 
 	<script id="example1">
 
@@ -610,7 +240,8 @@ $('.selector-name').multilevelSlideOver();</code></pre>
 				hoverIntentTimeout: 300,
 				wholeLinkToggler: true,
 				toggleOnClickOnly: true,
-				excludeLevel: 2
+				excludeLevel: 2,
+				expandActiveItem: true
 			});
 			
 			multilevelNavSlideOver('.example-navbar', {
@@ -619,21 +250,5 @@ $('.selector-name').multilevelSlideOver();</code></pre>
 			});
 		});
 	</script>
-
-	<script id="example2">
-		document.addEventListener('DOMContentLoaded', () => {
-			
-			// Initialize navbar
-			multilevelNav('.example-stacked', {
-				expandActiveItem: true
-			});
-			
-			// Initialize slideover
-			multilevelNavSlideOver('.example-stacked', {
-				slideTitleLink: true
-			});	
-		});
-	</script>
 </body>
-
 </html>

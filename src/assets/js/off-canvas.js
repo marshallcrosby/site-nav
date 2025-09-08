@@ -113,6 +113,7 @@ class OffCanvasNav {
     }
     
     setupSwipeListeners() {
+        console.log('l');
      
         // Touch events for swipe functionality
         document.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: true });

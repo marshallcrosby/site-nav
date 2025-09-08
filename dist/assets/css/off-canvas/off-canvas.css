@@ -1,6 +1,5 @@
 :root {
-  --oc-breakpoint: 768px;
-  --oc-menu-width: 320px;
+  --oc-menu-width: calc(100vw - 30px);
   --oc-container-width: 1200px;
   --oc-nav-z-index: 4;
   --oc-overlay-z-index: 3;
@@ -8,54 +7,49 @@
   --oc-navbar-bg-color: #212529;
   --oc-overlay-bg-color: rgba(0, 0, 0, 0.5);
   --oc-off-canvas-bg: #fff;
-  --oc-off-canvas-offset-top: 20px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --oc-off-canvas-offset-top: 0px;
 }
 
 .oc-nav {
   background-color: var(--oc-navbar-bg-color);
+  z-index: var(--oc-nav-z-index);
   position: sticky;
   top: 0;
-  z-index: var(--oc-nav-z-index);
 }
 
 .oc-nav__container {
   max-width: var(--oc-container-width);
+  align-items: center;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .oc-nav__brand {
-  color: white;
   text-decoration: none;
-  font-size: 1.25rem;
   font-weight: bold;
+  color: white;
 }
 
 .oc-nav__toggle {
-  display: block;
   background: none;
+  display: block;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .oc-nav__menu {
+  height: calc(100% - var(--oc-off-canvas-offset-top));
+  width: var(--oc-menu-width);
   position: fixed;
+  z-index: var(--oc-off-canvas-z-index);
   top: var(--oc-off-canvas-offset-top);
   right: 100%;
-  width: var(--oc-menu-width);
-  height: calc(100% - var(--oc-off-canvas-offset-top));
   background: var(--oc-off-canvas-bg);
-  z-index: var(--oc-off-canvas-z-index);
   transition: transform 450ms cubic-bezier(0.19, 1, 0.22, 1);
   flex-direction: column;
   align-items: stretch;
-  padding: 1rem;
   overflow-y: auto;
 }
 .oc-nav__menu.show {
@@ -112,11 +106,21 @@
   visibility: visible;
 }
 
+.oc-nav__visually-hidden {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .oc-nav__close {
   display: flex;
   background: none;
   border: none;
-  font-size: 1.5rem;
   cursor: pointer;
   color: #000;
   padding: 0;
