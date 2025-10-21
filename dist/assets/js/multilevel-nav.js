@@ -434,7 +434,7 @@ class MultilevelNav {
         childCollapse.forEach((collapse, index) => {
             const childCollapseId = 'mln' + mlnCurrent + 'ChildCollapse' + (index + 1);
             
-            collapse.setAttribute('aria-hidden', 'true');
+            collapse.setAttribute('data-mln-hidden', 'true');
             collapse.setAttribute('data-mln-active-status', 'off');
             collapse.setAttribute('id', childCollapseId);
             
@@ -452,7 +452,7 @@ class MultilevelNav {
         if (this.mlnExpander) {
             const mlnExpanderId = 'mln' + mlnCurrent + 'Expander1';
             
-            this.mlnExpander.setAttribute('aria-hidden', 'true');
+            this.mlnExpander.setAttribute('data-mln-hidden', 'true');
             this.mlnExpander.setAttribute('id', mlnExpanderId);
             
             const expandBtn = this.element.querySelector('.mln__expand-btn');
@@ -667,7 +667,7 @@ class MultilevelNav {
                 if (
                     window.matchMedia(`(min-width: ${this.mlnDataBreakpoint}px)`).matches &&
                     associatedMenu && 
-                    associatedMenu.getAttribute('aria-hidden') === 'false' &&
+                    associatedMenu.getAttribute('data-mln-hidden') === 'false' &&
                     hasChild.closest('.mln--navbar')
                 ) {
                     this.toggleChild(hasChild, 'hide', true);
@@ -970,7 +970,7 @@ class MultilevelNav {
             if (animate === true) {
                 mlnToggleChildCollapse.classList.add('mln__child--transitioning');
                 mlnToggleChildCollapse.style.height = collapseHeight + 'px';
-                mlnToggleChildCollapse.setAttribute('aria-hidden', ariaHiddenValue);
+                mlnToggleChildCollapse.setAttribute('data-mln-hidden', ariaHiddenValue);
                 
                 const handleTransitionEnd = (e) => {
                     if (e.target !== mlnToggleChildCollapse) return;
@@ -980,7 +980,7 @@ class MultilevelNav {
                     mlnToggleChildCollapse.classList.remove('mln__child--transitioning');
                     mlnToggleChildCollapse.style.height = '';
                     
-                    if (mlnToggleChildCollapse.getAttribute('aria-hidden') === 'false') {
+                    if (mlnToggleChildCollapse.getAttribute('data-mln-hidden') === 'false') {
                         mlnToggleChildCollapse.classList.add('mln--height-auto');
                         mlnToggleChildCollapse.classList.add('mln__child--overflow-visible');
                     }
@@ -993,7 +993,7 @@ class MultilevelNav {
             } else {
                 mlnToggleChildCollapse.style.height = 'auto';
                 mlnToggleChildCollapse.classList.add('mln--height-auto');
-                mlnToggleChildCollapse.setAttribute('aria-hidden', ariaHiddenValue);
+                mlnToggleChildCollapse.setAttribute('data-mln-hidden', ariaHiddenValue);
                 mlnToggleChildCollapse.style.height = '';
                 mlnToggleChildCollapse.classList.add('mln__child--overflow-visible');
                 
@@ -1026,7 +1026,7 @@ class MultilevelNav {
                 mlnToggleChildCollapse.style.height = collapseHeight + 'px';
                 mlnToggleChildCollapse.style.minHeight = collapseHeight + 'px';
                 mlnToggleChildCollapse.classList.remove('mln__child--overflow-visible', 'mln--height-auto');
-                mlnToggleChildCollapse.setAttribute('aria-hidden', ariaHiddenValue);
+                mlnToggleChildCollapse.setAttribute('data-mln-hidden', ariaHiddenValue);
                 mlnToggleChildCollapse.classList.add('mln__child--transitioning');
                 
                 // Force a reflow to ensure the initial height is applied before transitioning
@@ -1054,7 +1054,7 @@ class MultilevelNav {
                 mlnToggleChildCollapse.style.minHeight = '';
             } else {
                 mlnToggleChildCollapse.classList.remove('mln__child--overflow-visible', 'mln--height-auto');
-                mlnToggleChildCollapse.setAttribute('aria-hidden', ariaHiddenValue);
+                mlnToggleChildCollapse.setAttribute('data-mln-hidden', ariaHiddenValue);
                 mlnToggleChildCollapse.style.height = '';
                 
                 mlnHasChild.dispatchEvent(MultilevelNav.createCustomEvent('hidden.mln.child'));
@@ -1078,7 +1078,7 @@ class MultilevelNav {
                 
                 this.mlnExpander.classList.add('mln__expander--transitioning');
                 this.mlnExpander.style.height = collapseHeight + 'px';
-                this.mlnExpander.setAttribute('aria-hidden', 'false');
+                this.mlnExpander.setAttribute('data-mln-hidden', 'false');
                 
                 if (expandBtn) {
                     expandBtn.setAttribute('aria-expanded', 'true');
@@ -1107,7 +1107,7 @@ class MultilevelNav {
                 
                 this.mlnExpander.classList.add('mln__expander--transitioning');
                 this.mlnExpander.style.height = collapseHeight + 'px';
-                this.mlnExpander.setAttribute('aria-hidden', 'true');
+                this.mlnExpander.setAttribute('data-mln-hidden', 'true');
                 
                 if (expandBtn) {
                     expandBtn.setAttribute('aria-expanded', 'false');
@@ -1142,13 +1142,13 @@ class MultilevelNav {
             
             if (window.matchMedia(`(max-width: ${this.mlnDataBreakpoint - 1}px)`).matches) {
                 this.mlnExpander.classList.remove('mln__expander--showing');
-                this.mlnExpander.setAttribute('aria-hidden', 'true');
+                this.mlnExpander.setAttribute('data-mln-hidden', 'true');
                 
                 if (expandBtn) {
                     expandBtn.setAttribute('aria-expanded', 'false');
                 }
             } else {
-                this.mlnExpander.setAttribute('aria-hidden', 'false');
+                this.mlnExpander.setAttribute('data-mln-hidden', 'false');
                 
                 if (expandBtn) {
                     expandBtn.setAttribute('aria-expanded', 'true');
@@ -1161,14 +1161,14 @@ class MultilevelNav {
             
             if (window.matchMedia(`(max-width: ${this.mlnDataBreakpoint - 1}px)`).matches) {
                 this.mlnExpander.classList.remove('mln__expander--showing');
-                this.mlnExpander.setAttribute('aria-hidden', 'true');
+                this.mlnExpander.setAttribute('data-mln-hidden', 'true');
                 
                 if (expandBtn) {
                     expandBtn.setAttribute('aria-expanded', 'false');
                 }
             } else {
                 this.mlnExpander.classList.add('mln__expander--showing');
-                this.mlnExpander.setAttribute('aria-hidden', 'false');
+                this.mlnExpander.setAttribute('data-mln-hidden', 'false');
                 
                 if (expandBtn) {
                     expandBtn.setAttribute('aria-expanded', 'true');

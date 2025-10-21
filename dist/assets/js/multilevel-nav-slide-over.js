@@ -107,8 +107,8 @@ class MultilevelSlideOver {
     closeAllChildren(element) {
         if (element.classList.contains('mln--navbar-slide-over')) {
             // Hide all expanded elements
-            element.querySelectorAll('[aria-hidden="false"]').forEach(el => {
-                el.setAttribute('aria-hidden', 'true');
+            element.querySelectorAll('[data-mln-hidden="false"]').forEach(el => {
+                el.setAttribute('data-mln-hidden', 'true');
                 el.classList.remove('mln--height-auto', 'mln__child--overflow-visible');
             });
             
@@ -196,7 +196,7 @@ class MultilevelSlideOver {
             
             const menuSectionLabel = menuSectionLink.innerHTML;
             const backButtonSymbol = this.settings.backButtonSymbol ? 
-                `<span aria-hidden="true">${this.settings.backButtonSymbol}</span> ` : '';
+                `<span data-mln-hidden="true">${this.settings.backButtonSymbol}</span> ` : '';
             
             const isNotLinkable = menuSectionLink.getAttribute('data-mln-not-linkable');
             const useMenuText = isNotLinkable || this.settings.dynamicBackButtonTitle;

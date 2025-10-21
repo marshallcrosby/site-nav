@@ -58,7 +58,7 @@
         clear: both;
     }
     
-    &[aria-hidden="true"] {
+    &[data-mln-hidden="true"] {
         .mln__expander__helper > * {
             transition: visibility var(--mln-transition-speed-expander) var(--mln-transition-ease-child-menu);
             visibility: hidden;
@@ -135,7 +135,7 @@
         display: block;
     }
 
-    &[aria-hidden="true"] {
+    &[data-mln-hidden="true"] {
         * {
             transition: visibility var(--mln-transition-speed-child-menu) var(--mln-transition-ease-child-menu);
             visibility: hidden;
@@ -297,7 +297,7 @@
                 overflow: visible;
                 height: var(--mln-height-expander);
 
-                &[aria-hidden="true"] {
+                &[data-mln-hidden="true"] {
                     * {
                         visibility: visible;
                         user-select: none;

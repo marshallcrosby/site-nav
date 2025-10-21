@@ -79,7 +79,25 @@ class OffCanvasNav {
     }
     
     getMenuWidth() {
-        const menuWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--oc-menu-width'), 10);
+        let menuWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--oc-menu-width'), 10);
+        
+        if (isNaN(menuWidth)) {
+            const widthValue = getComputedStyle(document.documentElement).getPropertyValue('--oc-menu-width').trim();
+            
+            if (widthValue.endsWith('vw')) {
+                const vw = parseFloat(widthValue);
+                menuWidth = Math.round(window.innerWidth * (vw / 100));
+            } else if (widthValue.startsWith('calc(')) {
+                const match = widthValue.match(/calc\((\d+)(vw)\s*-\s*(\d+)px\)/);
+                
+                if (match) {
+                    const vw = parseFloat(match[1]);
+                    const px = parseInt(match[3], 10);
+                    menuWidth = Math.round(window.innerWidth * (vw / 100)) - px;
+                }
+            }
+        }
+
         return menuWidth;
     }
     
@@ -117,7 +135,6 @@ class OffCanvasNav {
     }
     
     setupSwipeListeners() {
-        console.log('l');
      
         // Touch events for swipe functionality
         document.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: true });
@@ -269,68 +286,6 @@ class OffCanvasNav {
         setTimeout(() => {
             this.resetMenuTransform();
         }, 300);
-    }
-    
-    // Mouse event handlers for desktop swipe simulation
-    handleMouseStart(e) {
-        if (!this.isMobileView() || !this.isMenuOpen()) return;
-        
-        this.touchStartX = e.clientX;
-        this.touchStartY = e.clientY;
-        this.touchCurrentX = this.touchStartX;
-        this.touchCurrentY = this.touchStartY;
-        this.isDragging = false;
-        this.isGestureInProgress = false;
-        this.swipeStartTime = Date.now();
-        this.isMouseDown = true;
-    }
-    
-    handleMouseMove(e) {
-        if (!this.isMobileView() || !this.isMouseDown || !this.isMenuOpen()) return;
-        
-        this.touchCurrentX = e.clientX;
-        this.touchCurrentY = e.clientY;
-        
-        const deltaX = this.touchCurrentX - this.touchStartX;
-        const deltaY = this.touchCurrentY - this.touchStartY;
-        
-        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
-            const isRight = this.isMenuOnRight();
-            
-            // Only allow closing gestures
-            const isClosingGesture = isRight ? deltaX > 0 : deltaX < 0;
-            
-            if (isClosingGesture) {
-                this.isDragging = true;
-                this.isGestureInProgress = true;
-                
-                // Calculate the new position for closing
-                const menuWidth = this.getMenuWidth();
-                let newTranslateX;
-                
-                if (isRight) {
-                    // Right menu: positive deltaX closes
-                    newTranslateX = -menuWidth + deltaX;
-                } else {
-                    // Left menu: negative deltaX closes
-                    newTranslateX = menuWidth + deltaX;
-                }
-                
-                this.setMenuTransform(newTranslateX);
-            }
-        }
-    }
-    
-    handleMouseEnd(e) {
-        if (!this.isMobileView() || !this.isMouseDown) return;
-        
-        if (this.isDragging) {
-            this.handleTouchEnd(e);
-        }
-        
-        this.isMouseDown = false;
-        this.isDragging = false;
-        this.isGestureInProgress = false;
     }
     
     toggleMenu() {

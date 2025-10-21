@@ -249,7 +249,7 @@
 .mln__expander:after {
   clear: both;
 }
-.mln__expander[aria-hidden=true] .mln__expander__helper > * {
+.mln__expander[data-mln-hidden=true] .mln__expander__helper > * {
   transition: visibility var(--mln-transition-speed-expander) var(--mln-transition-ease-child-menu);
   visibility: hidden;
   -webkit-user-select: none;
@@ -333,7 +333,7 @@
 .mln__child__collapse .mln__child__mega-menu {
   display: block;
 }
-.mln__child__collapse[aria-hidden=true] * {
+.mln__child__collapse[data-mln-hidden=true] * {
   transition: visibility var(--mln-transition-speed-child-menu) var(--mln-transition-ease-child-menu);
   visibility: hidden;
   -webkit-user-select: none;
@@ -443,7 +443,7 @@
     overflow: visible;
     height: var(--mln-height-expander);
   }
-  .mln--navbar .mln__expander[aria-hidden=true] * {
+  .mln--navbar .mln__expander[data-mln-hidden=true] * {
     visibility: visible;
     -webkit-user-select: none;
        -moz-user-select: none;
