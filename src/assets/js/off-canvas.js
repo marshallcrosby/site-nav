@@ -1,3 +1,7 @@
+/*!
+  * Off canvas nav v4.0.0 Beta
+  */
+
 class OffCanvasNav {
     constructor(navElement) {
         
