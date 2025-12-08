@@ -12,6 +12,7 @@ class MultilevelSlideOver {
         this.settings = {
             slideTitles: true,
             slideTitleLink: false,
+            backButtonText: 'Back',
             backButtonSymbol: '&lsaquo;',
             dynamicBackButtonTitle: false,
             offCanvasCloseAllMenus: false,
@@ -202,7 +203,7 @@ class MultilevelSlideOver {
             const useMenuText = isNotLinkable || this.settings.dynamicBackButtonTitle;
             const backButtonText = useMenuText ? 
                 `${backButtonSymbol}${menuSectionLink.textContent}` : 
-                `${backButtonSymbol}Back`;
+                `${backButtonSymbol}${this.settings.backButtonText}`;
             
             // Create controls container
             const controlsDiv = document.createElement('div');
