@@ -200,14 +200,14 @@ class MultilevelNav {
         // Add depth classes to list items
         this.setupDepthClasses();
         
-        // Set up child lists
-        this.setupChildLists();
-        
         // Set up mega menus
         this.setupMegaMenus();
-        
+
         // Add mega menu modifier class to top level
         this.setupMegaMenuModifier();
+
+        // Set up child lists
+        this.setupChildLists();
         
         // Wrap the parent links in their own div
         this.wrapParentLinks();
