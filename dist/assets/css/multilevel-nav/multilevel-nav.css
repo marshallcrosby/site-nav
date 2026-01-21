@@ -46,7 +46,7 @@
   --mln-height-toggle-symbol-chevron: 0.563rem;
   --mln-width-off-canvas: var(--mln-width-slide-over-width);
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   :root {
     --mln-margin-right-navbar-list-item: .5rem;
     --mln-width-child-menu: 12.5rem;
@@ -172,7 +172,7 @@
 .mln--navbar {
   display: flex;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mln--navbar .mln__expand-btn {
     display: none;
   }
@@ -383,7 +383,7 @@
   content: "";
   cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mln__child-controls:before {
     width: var(--mln-width-toggle-button);
   }
@@ -418,7 +418,7 @@
   padding-right: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mln--expand .mln__expander {
     height: auto;
   }
@@ -435,7 +435,7 @@
     width: auto;
   }
 }
-@media (min-width: 768px) and (min-width: 768px) {
+@media (min-width: 992px) and (min-width: 992px) {
   .mln--navbar .mln__expander {
     position: static;
     top: auto;
@@ -450,7 +450,7 @@
             user-select: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mln--navbar .mln__child-controls {
     position: relative;
     padding-right: inherit;
@@ -546,7 +546,7 @@
   transition: opacity calc(var(--mln-transition-speed-expander) - 200ms) linear;
   pointer-events: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mln-backdrop {
     display: block;
   }
@@ -577,7 +577,7 @@
   padding: var(--mln-padding-menu-item-inset);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mln--navbar-slide-over .mln__slide-over-controls {
     display: none;
   }
@@ -635,7 +635,7 @@
   height: auto !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .mln--navbar-slide-over {
     --mln-width-slide-over-width: 100%;
     overflow: hidden;
@@ -699,7 +699,7 @@
     width: var(--mln-width-slide-over-width);
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .mln--navbar-slide-over {
     min-height: 0 !important;
     position: static;

@@ -1,3 +1,5 @@
+$oc-breakpoint: 992px !default;
+
 :root {
     --oc-menu-width: calc(100vw - 30px);
     --oc-container-width: 1200px;
@@ -134,7 +136,7 @@
     align-self: flex-end;
 }
 
-@media (min-width: 992px) {
+@media (min-width: $oc-breakpoint) {
     .oc-nav__toggle,
     .oc-overlay,
     .oc-nav__close {

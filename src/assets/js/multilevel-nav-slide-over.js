@@ -15,6 +15,7 @@ class MultilevelSlideOver {
             backButtonText: 'Back',
             backButtonSymbol: '&lsaquo;',
             dynamicBackButtonTitle: false,
+            // dynamicBackButtonTitlePreviousLevel: false,
             offCanvasCloseAllMenus: false,
             ...options
         };
